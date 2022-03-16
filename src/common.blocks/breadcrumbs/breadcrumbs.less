@@ -1,0 +1,52 @@
+@import (reference) '../../less/variables.less';
+
+.breadcrumbs-wrapper {
+    margin: 20px 0 20px;
+    display: none;
+
+    @media screen and (min-width: @tablet) {
+        display: block;
+    }
+}
+
+.breadcrumbs {
+    list-style: none;
+
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #A0A0A0;
+        position: relative;
+
+        &:not(:first-child) {
+            padding-left: 20px;
+        }
+
+        &:not(:first-child):before {
+            content: '>';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            color: #A0A0A0;
+        }
+
+        &:last-child {
+            color: @color-text;
+        }
+
+        &:last-child:before {
+            color: @color-text;
+        }
+    }
+
+    &__link {
+        display: block;
+        transition: @transition;
+
+        &:not(div):hover {
+            color: @color-brand;
+            border-bottom-color: @color-brand;
+        }
+    }
+}

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная страница</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+    <div class="page-wrapper" id="vue-app">
+
+        ${require('./common.blocks/header/header-fixed.html')}
+
+        <main class="page-wrapper__main">
+            <h1 class="visually-hidden">
+                STOPмебель
+            </h1>
+            <div class="main-slider">
+                <div class="swiper-container main-slider__container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main-slider__slide">
+                            <picture class="main-slider__slide-bg">
+                                <source srcset="${require('./common.blocks/main-slider/img/main-slider__slide.jpg')}"
+                                    media="(min-width: 768px)">
+                                <img class="image"
+                                    src="${require('./common.blocks/main-slider/img/main-slider__slide.jpg')}"
+                                    alt="Название баннера">
+                            </picture>
+                            <div class="container main-slider__slide-inner">
+                                <span class="main-slider__text main-slider__text_small">
+                                    от производителя и без посредников
+                                </span>
+                                <span class="main-slider__text main-slider__text_big">
+                                    дизайнерские диваны и кровати
+                                </span>
+                                <span class="main-slider__text">
+                                    с доставкой по РФ и снг
+                                </span>
+                                <div class="main-slider__btn">
+                                    <a class="btn" href="#">
+                                        Посмотреть коллекцию
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-slider__slide"
+                            style="background-image: url(${require('./common.blocks/main-slider/img/main-slider__slide.jpg')});">
+                            <div class="container main-slider__slide-inner">
+                                <span class="main-slider__text main-slider__text_small">
+                                    от производителя и без посредников
+                                </span>
+                                <span class="main-slider__text main-slider__text_big">
+                                    дизайнерские диваны и кровати
+                                </span>
+                                <span class="main-slider__text">
+                                    с доставкой по РФ и снг
+                                </span>
+                                <a class="btn main-slider__btn" href="#">
+                                    Посмотреть коллекцию
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-slider__slide"
+                            style="background-image: url(${require('./common.blocks/main-slider/img/main-slider__slide.jpg')});">
+                            <div class="container main-slider__slide-inner">
+                                <span class="main-slider__text main-slider__text_small">
+                                    от производителя и без посредников
+                                </span>
+                                <span class="main-slider__text main-slider__text_big">
+                                    дизайнерские диваны и кровати
+                                </span>
+                                <span class="main-slider__text">
+                                    с доставкой по РФ и снг
+                                </span>
+                                <a class="btn main-slider__btn" href="#">
+                                    Посмотреть коллекцию
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider__controls">
+                        <button class="swiper-button-prev main-slider__control-btn main-slider__control-btn_prev"
+                            type="button" aria-hidden="true"></button>
+                        <div class="swiper-pagination main-slider__pagination"></div>
+                        <button class="swiper-button-next main-slider__control-btn main-slider__control-btn_next"
+                            type="button" aria-hidden="true"></button>
+                    </div>
+                </div>
+                <ul class="socials socials_vertical main-slider__socials">
+                    <li class="socials__item">
+                        <a class="socials__link socials__link_dark socials__link_big" href="#">
+                            <svg class="socials__icon">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link socials__link_dark socials__link_big" href="#">
+                            <svg class="socials__icon">
+                                <use xlink:href="#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link socials__link_dark socials__link_big" href="#">
+                            <svg class="socials__icon">
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link socials__link_dark socials__link_big" href="#">
+                            <svg class="socials__icon">
+                                <use xlink:href="#icon-od"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <span class="main-slider__auxiliary">
+                    Листайте вниз
+                </span>
+            </div>
+            ${require('./common.blocks/categories-list/categories-list.html')}
+            <!--
+            <ul class="categories-list">
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <div class="categories-list__bg" style="background-image: url('https://i.picsum.photos/id/237/500/1000.jpg?hmac=v446XJ9lL5khR22XPzNPZDA4CBtOmnpE2Qdh1ZPxBbs')"></div>
+                        </div>
+                        <span class="categories-list__title">
+                            Прямые диваны
+                        </span>
+                    </a>
+                </li>
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <div class="categories-list__bg" style="background-image: url('https://i.picsum.photos/id/237/1000/500.jpg?hmac=50rbtLb9g0rPiP45eIJcXsKEwkshNcx7Uwvg1ARD2D8')"></div>
+                        </div>
+                        <span class="categories-list__title">
+                            Угловые диваны
+                        </span>
+                    </a>
+                </li>
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <img class="categories-list__img" src="https://i.picsum.photos/id/237/1000/1000.jpg?hmac=5nME13-xBzl4yi2t1tFev6zsf5IWO2-efZAoXEm9ltc" alt="изображение модульного дивана">
+                        </div>
+                        <span class="categories-list__title">
+                            Модульные диваны
+                        </span>
+                    </a>
+                </li>
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <img class="categories-list__img" src="https://i.picsum.photos/id/237/1000/500.jpg?hmac=50rbtLb9g0rPiP45eIJcXsKEwkshNcx7Uwvg1ARD2D8" alt="изображение кровати">
+                        </div>
+                        <span class="categories-list__title">
+                            Кровати
+                        </span>
+                    </a>
+                </li>
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <img class="categories-list__img" src="https://i.picsum.photos/id/237/1000/500.jpg?hmac=50rbtLb9g0rPiP45eIJcXsKEwkshNcx7Uwvg1ARD2D8" alt="изображение кухонной мебели">
+                        </div>
+                        <span class="categories-list__title">
+                            Кухонная мебель
+                        </span>
+                    </a>
+                </li>
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <img class="categories-list__img" src="https://i.picsum.photos/id/237/1000/500.jpg?hmac=50rbtLb9g0rPiP45eIJcXsKEwkshNcx7Uwvg1ARD2D8" alt="изображение кресел">
+                        </div>
+                        <span class="categories-list__title">
+                            Кресла
+                        </span>
+                    </a>
+                </li>
+                <li class="categories-list__item">
+                    <a class="categories-list__link" href="#">
+                        <div class="categories-list__img-wrapper">
+                            <img class="categories-list__img" src="https://i.picsum.photos/id/237/1000/500.jpg?hmac=50rbtLb9g0rPiP45eIJcXsKEwkshNcx7Uwvg1ARD2D8" alt="изображение детской мебели">
+                        </div>
+                        <span class="categories-list__title">
+                            Детская мебель
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            -->
+            <section class="popular">
+                <div class="container">
+                    <header class="popular__header section__title-wrapper">
+                        <h2
+                            class="title title_second section__title section__title_underline section__title_underline_wordwidth">
+                            Популярные диваны
+                        </h2>
+                    </header>
+                </div>
+                <ul class="popular__list">
+                    <li class="popular__item popular__item_first">
+                        <div class="popular__item-bg popular__item-bg_dark">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/720/576.jpg?hmac=eRsKvnHsxE-lmijrRKxbebJDK_I1OwdfFR05alYxOzk);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Бренд
+                                </h3>
+                                <p class="popular__item-text">
+                                    идеальная модель для малогабаритных помещений. Судите сами: в ней сочетаются
+                                    стильный дизайн, функциональный механизм и бесспорное удобство. Диван также подходит
+                                    для комфортного ежедневного сна.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- минимальное разрешение картинки 308х288, оптимальное - 616х576 -->
+                    <li class="popular__item popular__item_second">
+                        <div class="popular__item-bg">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/616/576.jpg?hmac=b_J-eZ02RQWqwCSASdKcY9Z3zM5elk2JutHta0Ph_UQ);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Стрит
+                                </h3>
+                                <p class="popular__item-text">
+                                    современная модель, которая станет настоящим украшением любой гостиной.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- минимальное разрешение картинки 205х288, оптимальное - 410х576 -->
+                    <li class="popular__item popular__item_third">
+                        <div class="popular__item-bg">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/410/576.jpg?hmac=3F-h-qbmiB2L12d0KqXzD3ovtBK04ZzdFhhQTOy9wnI);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Манхеттен
+                                </h3>
+                                <p class="popular__item-text">
+                                    оправдывает все представления о комфортной современности, включая в себя элегантный
+                                    дизайн и настоящий уют.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- минимальное разрешение картинки 205х288, оптимальное - 410х576 -->
+                    <li class="popular__item popular__item_fourth">
+                        <div class="popular__item-bg">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/410/576.jpg?hmac=3F-h-qbmiB2L12d0KqXzD3ovtBK04ZzdFhhQTOy9wnI);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Рич
+                                </h3>
+                                <p class="popular__item-text">
+                                    идеальная модель для малогабаритных помещений. Судите сами: в ней сочетаются
+                                    стильный дизайн, функциональный механизм и бесспорное удобство.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="popular__item popular__item_fifth">
+                        <div class="popular__item-bg popular__item-bg_dark">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/720/576.jpg?hmac=eRsKvnHsxE-lmijrRKxbebJDK_I1OwdfFR05alYxOzk);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Элегант
+                                </h3>
+                                <p class="popular__item-text">
+                                    Рожден наполнять уютом пространство и акцентировать внимание на его стиле.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- минимальное разрешение картинки 308х288, оптимальное - 616х576 -->
+                    <li class="popular__item popular__item_sixth">
+                        <div class="popular__item-bg">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/616/576.jpg?hmac=b_J-eZ02RQWqwCSASdKcY9Z3zM5elk2JutHta0Ph_UQ);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Муза
+                                </h3>
+                                <p class="popular__item-text">
+                                    воплощение стиля и эргономики, заключившееся в ультра-современном предмете мебели.
+                                    Лаконичные формы модулей придают модели индивидуальность и изысканность.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- минимальное разрешение картинки 308х288, оптимальное - 616х576 -->
+                    <li class="popular__item popular__item_7">
+                        <div class="popular__item-bg">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/616/576.jpg?hmac=b_J-eZ02RQWqwCSASdKcY9Z3zM5elk2JutHta0Ph_UQ);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Стрит
+                                </h3>
+                                <p class="popular__item-text">
+                                    современная модель, которая станет настоящим украшением любой гостиной.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- минимальное разрешение картинки 308х288, оптимальное - 616х576 -->
+                    <li class="popular__item popular__item_8">
+                        <div class="popular__item-bg">
+                            <span
+                                style="background-image: url(https://i.picsum.photos/id/1018/616/576.jpg?hmac=b_J-eZ02RQWqwCSASdKcY9Z3zM5elk2JutHta0Ph_UQ);"></span>
+                        </div>
+                        <a class="popular__item-link" href="#">
+                            <div class="popular__item-content">
+                                <h3
+                                    class="title title_third popular__item-title section__title section__title_underline">
+                                    Стрит
+                                </h3>
+                                <p class="popular__item-text">
+                                    современная модель, которая станет настоящим украшением любой гостиной.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="warehouse page-wrapper__warehouse">
+                <div class="warehouse__bg"
+                    style="background-image: url(https://i.picsum.photos/id/1057/1920/760.jpg?hmac=EGh1ZkjpBcRxy2pWkEz0dVXJN7wCrhtXqTjbdoIgrdg);">
+                </div>
+                <div class="warehouse__container">
+                    <div class="warehouse__content">
+                        <h2 class="title title_third section__title section__title_underline">
+                            Складская программа
+                        </h2>
+                        <p class="warehouse__text">
+                            Наша мягкая мебель — это настоящее воплощение итальянского стиля. В производстве используем
+                            только экологически чистые материалы — массив дерева. Практически любой диван имеет
+                            раскладной механизм, кровати, как и диваны, могут быть оснащены ящиком для хранения белья.
+                        </p>
+                        <div class="warehouse__link-wrapper">
+                            <a class="btn btn_secondary warehouse__link" href="warehouse-program.html">
+                                Подробности
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="common-box">
+                <div class="container">
+                    <h2 class="title title_second title_second_big section__title section__title_underline">
+                        <a href="#">
+                            Мы в инстаграме
+                            <svg>
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </h2>
+                    ${require('./common.blocks/instagram-gallery/instagram-gallery.html')}
+                </div>
+            </section>
+            <!--
+            <section class="instagram-feed">
+                <header class="instagram-feed__header">
+                    <div class="instagram-feed__header-inner">
+                        <h2 class="title title_third title_third_small section__title section__title_underline instagram-feed__title">
+                            наш инстаграм
+                        </h2>
+                        <a class="instagram-feed__link" href="https://www.instagram.com/stopmebel_kuznetsk/">
+                            <svg class="instagram-feed__icon">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                            stopmebel_kuznetsk
+                        </a>
+                    </div>
+                </header>
+                <div class="instagram-feed__slider">
+                    <div class="swiper-container swiper-instagram">
+                        <div class="swiper-wrapper">
+                            <a class="swiper-slide instagram-feed__item" href="#">
+                                <div class="instagram-feed__bg" style="background-image: url('https://i.picsum.photos/id/1063/500/500.jpg?hmac=hMMeY8PDQbzi3p5JZVrZClVz-ejoEVfYKrhKBXv-lTE')"></div>
+                            </a>
+                            <a class="swiper-slide instagram-feed__item" href="#">
+                                <div class="instagram-feed__bg" style="background-image: url('https://i.picsum.photos/id/1064/500/500.jpg?hmac=c7YCu1E193iqPatp5uFqGKejXystYxSZl0rHWp4lrZU')"></div>
+                            </a>
+                            <a class="swiper-slide instagram-feed__item" href="#">
+                                <div class="instagram-feed__bg" style="background-image: url('https://i.picsum.photos/id/1063/500/500.jpg?hmac=hMMeY8PDQbzi3p5JZVrZClVz-ejoEVfYKrhKBXv-lTE')"></div>
+                            </a>
+                            <a class="swiper-slide instagram-feed__item" href="#">
+                                <div class="instagram-feed__bg" style="background-image: url('https://i.picsum.photos/id/1063/500/500.jpg?hmac=hMMeY8PDQbzi3p5JZVrZClVz-ejoEVfYKrhKBXv-lTE')"></div>
+                            </a>
+                            <a class="swiper-slide instagram-feed__item" href="#">
+                                <div class="instagram-feed__bg" style="background-image: url('https://i.picsum.photos/id/1064/500/500.jpg?hmac=c7YCu1E193iqPatp5uFqGKejXystYxSZl0rHWp4lrZU')"></div>
+                            </a>
+                            <a class="swiper-slide instagram-feed__item" href="#">
+                                <div class="instagram-feed__bg" style="background-image: url('https://i.picsum.photos/id/1063/500/500.jpg?hmac=hMMeY8PDQbzi3p5JZVrZClVz-ejoEVfYKrhKBXv-lTE')"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+            <section class="common-box">
+                <div class="container">
+                    <h2 class="title title_second title_second_big section__title section__title_underline">
+                        Качественная мебель от производителя
+                    </h2>
+                    <p class="common-box__text">
+                        Потребности современных людей ежегодно становятся всё больше и теперь человеку недостаточно
+                        иметь просто комфортный диван или удобную кровать: хочется, чтобы изделия были уникальными и
+                        добавляли оригинальности домашнему пространству. Сделать интерьер просто неповторимым поможет
+                        дизайнерская мебель от Vosart. Онлайн-фабрика производит высококачественные модельные кровати и
+                        диваны по итальянскому дизайну и предлагает её на рынке России по довольно доступным ценам.
+                    </p>
+                </div>
+            </section>
+            <section class="questions">
+                <div class="container questions__container">
+                    <h2
+                        class="title title_second title_second_big section__title section__title_underline questions__title">
+                        Остались вопросы?
+                    </h2>
+                    <span class="questions__text">Обращайтесь к нам по телефонам:</span>
+                    <div class="questions__phones-wrapper">
+                        <div class="questions__phones-item">
+                            <div class="questions__phone-caption">Если вы в Пензенской области</div>
+                            <a class="questions__phone" href="tel:88002222358">8 (800) 222 23 58</a>
+                        </div>
+                        <div class="questions__phones-item">
+                            <div class="questions__phone-caption">Бесплатно для регионов</div>
+                            <a class="questions__phone" href="tel:+79374384502">+7 (937) 438-45-02</a>
+                        </div>
+                    </div>
+                    <span class="questions__text">
+                        Или пишите на почту
+                        <a class="link question__Link" href="mailto:stop.mebel@mail.ru">
+                            stop.mebel@mail.ru
+                        </a>
+                    </span>
+                    <div class="questions__link-group">
+                        <a class="questions__link" href="#">
+                            <svg class="icon questions__icon">
+                                <use xlink:href="#icon-marker"></use>
+                            </svg>
+                            Контакты
+                        </a>
+                        <div class="questions__link js-open-popup" data-target-popup="popup-ask">
+                            <svg class="icon questions__icon">
+                                <use xlink:href="#icon-question"></use>
+                            </svg>
+                            задать вопрос
+                        </div>
+                        <a class="questions__link" href="#">
+                            <svg class="icon questions__icon">
+                                <use xlink:href="#icon-catalog"></use>
+                            </svg>
+                            посмотреть каталог
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="main-map-wrap">
+                <iframe class="main-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197.6066032781716!2d46.59120211227834!3d53.10636409405348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe769559cbf99654!2zU1RPUC3QvNC10LHQtdC70Yw!5e0!3m2!1sru!2sru!4v1605185660917!5m2!1sru!2sru"
+                    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+        </main>
+
+        ${require('./common.blocks/footer/footer.html')}
+
+    </div>
+
+    <div class="become-partner become-partner_fixed">
+        <button class="btn btn_with-icon js-popup__btn js-open-popup" data-target-popup="popup-partner" type="button">
+            <svg class="become-partner__icon">
+                <use xlink:href="#icon-partner"></use>
+            </svg>
+            <span class="become-partner__text">Стать партнёром</span>
+        </button>
+    </div>
+
+    ${require('./common.blocks/popup/popup-partner.html')}
+
+    ${require('./common.blocks/popup/popup-ask.html')}
+
+    ${require('./common.blocks/popup/popup-order.html')}
+
+    ${require('./common.blocks/popup/popup-success.html')}
+
+    <!--
+    <div class="popup js-popup">
+        <div class="popup__container js-popup__container">
+            <button class="popup__close-btn js-popup__close-btn" type="button">
+                <span class="visually-hidden">
+                    Закрыть всплывающее окно
+                </span>
+            </button>
+            <h2 class="title title_medium title_third_small popup__title">
+                Стать партнёром
+            </h2>
+            <form class="form">
+                <label class="form__field">
+                    <input type="text" class="form__input" placeholder="Петр">
+                    <span class="form__label">
+                        Имя
+                    </span>
+                </label>
+                <label class="form__field">
+                    <input type="email" class="form__input" placeholder="igorshalom@gmail.com">
+                    <span class="form__label">
+                        Email
+                    </span>
+                </label>
+                <label class="form__field">
+                    <input type="email" class="form__input" placeholder="7743013901">
+                    <span class="form__label">
+                        ИНН
+                    </span>
+                </label>
+                <label class="toggle form__checkbox">
+                    <input type="checkbox" checked class="visually-hidden toggle__input">
+                    <span class="toggle__label">
+                        Я соглашаюсь на хранение и обработку моей персональной информации
+                    </span>
+                </label>
+                <div class="form__submit form__submit_align_right">
+                    <button class="btn form__sumbit-btn">
+                        Отправить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    -->
+
+    ${require('./common.blocks/splashscreen/splashscreen.html')}
+
+</body>
+
+</html>

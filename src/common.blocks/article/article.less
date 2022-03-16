@@ -1,0 +1,107 @@
+@import (reference) '../../less/variables.less';
+
+.article {
+    font-size: 14px;
+    line-height: 1.5;
+
+    & *:first-child {
+        margin-top: 0;
+    }
+
+    &__subtitle,
+    &__img,
+    &__list,
+    & p {
+        max-width: 900px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 40px 0 24px;
+    }
+
+    &__img {
+        margin: 40px 0;
+
+        & img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    & p {
+        margin: 24px 0;
+        font-size: 14px;
+
+        @media (min-width: @tablet) {
+            font-size: 15px;
+        }
+    }
+
+    &__list {
+
+        & ul {
+            list-style: none;
+            margin: 24px 0;
+
+            & li {
+                padding-top: 2px;
+                position: relative;
+                padding-left: 32px;
+                font-size: 14px;
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                @media (min-width: @tablet) {
+                    padding-top: 1px;
+                    font-size: 15px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 6px;
+                    top: 6px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: @color-brand;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    &__gallery {
+
+        & ul {
+            list-style: none;
+            margin: -12px;
+
+            @media (min-width: @tablet) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            & li {
+                padding: 12px;
+
+                @media (min-width: @tablet) {
+                    flex: 0 0 calc(100% / 2);
+                }
+
+                @media (min-width: @desktop) {
+                    flex: 0 0 calc(100% / 3);
+                }
+
+                & img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

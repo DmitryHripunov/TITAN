@@ -1,0 +1,82 @@
+@import (reference) '../../less/variables.less';
+@input-underline-height: 0.2rem;
+
+.form {
+
+  &__group {
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__field {
+    position: relative;
+    display: block;
+    padding-top: 1.6rem;
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+    padding-bottom: 1.6rem;
+    border: none;
+    border-bottom: @input-underline-height solid @color-separator;
+  }
+
+  &__field::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: @input-underline-height;
+    content: '';
+    background-color: @color-brand;
+    transition: width @transition-time;
+  }
+
+  &__field:focus-within::after {
+    width: 100%;
+  }
+
+  &__input::placeholder {
+    color: transparent;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    transition: @transition-time;
+    transform: translateY(16px);
+    color: @color-gray;
+  }
+
+  &__error {
+    display: block;
+    margin-top: 5px;
+    color: @color-brand;
+    font-size: 12px;
+  }
+
+  &__input:focus + &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translateY(0);
+    letter-spacing: 0.025rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__submit {
+    margin-top: 4rem;
+  }
+
+  &__submit_align_right {
+    text-align: right;
+  }
+}
+

@@ -1,0 +1,73 @@
+@import (reference) '../../less/variables.less';
+@hamburger-height: 0.2rem;
+
+.hamburger {
+  position: relative;
+
+  width: 2.4rem;
+  height: 1.6rem;
+
+  cursor: pointer;
+  text-indent: -9999px;
+
+  color: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  @media screen and (min-width: @hamburger) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+  }
+
+  &::before,
+  &::after,
+  &__label {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 0.2rem;
+
+    transition: 0.2s;
+
+    background-color: currentColor;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &.active {
+    color: @color-brand;
+  }
+
+  &__label {
+    top: calc(50% - @hamburger-height / 2);
+  }
+
+  &.active::before,
+  &.active::after {
+    top: calc(50% - @hamburger-height / 2);
+  }
+
+  &.active::before {
+    transform: rotate(45deg);
+  }
+
+  &.active::after {
+    transform: rotate(-45deg);
+  }
+
+  &.active &__label {
+    transform: rotate(45deg);
+  }
+}

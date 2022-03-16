@@ -1,0 +1,53 @@
+@import (reference) '../../less/variables.less';
+
+.pdf-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+    justify-content: center;
+
+    @media (min-width: @tablet) {
+        justify-content: unset;
+        margin: -24px;
+    }
+
+    &__item {
+        padding: 12px;
+        flex: 0 0 150px;
+
+        @media (min-width: @tablet) {
+            flex: 0 0 25%;
+            width: 25%;
+            padding: 24px;
+        }
+    }
+}
+
+.pdf-item {
+
+    &__img {
+        max-width: 268px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        --aspect-ratio: 264/368;
+
+        &:before {
+            content: '';
+            display: block;
+            padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }
+    }
+
+    &__caption {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+
+        @media (min-width: @tablet) {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+}

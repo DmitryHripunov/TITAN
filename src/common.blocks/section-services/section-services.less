@@ -1,0 +1,54 @@
+@import (reference) '../../less/variables.less';
+
+.services {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+
+  text-align: center;
+
+  background-color: @color-page-bg-second;
+
+  &__list {
+    list-style-type: none;
+
+    @media screen and (min-width: @desktop-small) {
+      display: flex;
+
+      justify-content: space-around;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto 8px;
+
+    @media (min-width: @desktop-small) {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  &__icon {
+    display: block;
+
+    width: 1em;
+    height: 1em;
+    margin: 0 auto 0.8rem;
+
+    font-size: 4.8rem;
+
+    fill: @color-black;
+
+    @media screen and (min-width: @desktop-small) {
+      font-size: 9.6rem;
+    }
+  }
+}

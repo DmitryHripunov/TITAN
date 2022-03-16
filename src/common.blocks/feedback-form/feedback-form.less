@@ -1,0 +1,76 @@
+@import (reference) '../../less/variables.less';
+
+.request {
+
+    &__inner {
+        padding: 32px 24px;
+        background-color: #fff;
+
+        @media (min-width: @desktop-small) {
+            padding: 40px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 10px;
+
+        @media (min-width: @tablet) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+
+        @media (min-width: @desktop-small) {
+            font-size: 25px;
+        }
+    }
+
+    &__description {
+        font-size: 13px;
+
+        @media (min-width: @desktop-small) {
+            font-size: 15px;
+        }
+    }
+
+    &__form {
+        margin-bottom: 10px;
+    }
+
+    &__warning {
+        @media (min-width: @desktop) {
+            line-height: 24px;
+            max-width: 60%;
+        }
+    }
+
+    & .form {
+
+        @media (min-width: @tablet) {
+            display: flex;
+        }
+    }
+
+    & .form__group {
+
+        @media (min-width: @tablet) {
+            flex: 0 0 30%;
+            padding-right: 5%;
+            margin-bottom: unset !important;
+        }
+    }
+
+    & .form__submit {
+
+        @media (min-width: @tablet) {
+            flex: 0 0 30%;
+            margin-top: unset;
+        }
+    }
+}
+

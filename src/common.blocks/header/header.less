@@ -1,0 +1,473 @@
+@import (reference) '../../less/variables.less';
+
+.header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  //background-color: @color-brand;
+  background-color: #171618;
+  transition: @transition;
+
+  @media screen and (min-width: @desktop-small) {
+    position: unset;
+    padding-top: 2.6rem;
+    background-color: @color-text-reverse;
+    text-align: center;
+
+    &.is-moved {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &_fixed {
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: @color-text-reverse;
+
+    @media screen and (min-width: @desktop-small) {
+      position: absolute;
+      background-color: transparent;
+    }
+  }
+
+  &_fixed.is-moved {
+
+      @media screen and (min-width: @desktop-small) {
+          background-color: #171618;
+      }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: @desktop-small) {
+      align-items: flex-start;
+
+      .header.is-moved & {
+        align-items: center;
+      }
+    }
+  }
+
+  &__logo-icon {
+    display: block;
+
+    width: 14.1rem;
+    height: 1.6rem;
+
+    fill: @color-text-reverse;
+
+    @media screen and (min-width: @desktop-small) {
+      display: none;
+    }
+  }
+
+  &__logo-icon_desktop {
+    display: none;
+
+
+    @media screen and (min-width: @desktop-small) {
+      display: block;
+      width: 12rem;
+      height: 5rem;
+      fill: currentColor;
+      transition: @transition;
+    }
+
+    .header.is-moved & {
+      height: 4rem;
+    }
+  }
+
+  &__mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    //padding-top: 4.4rem;
+    //padding-bottom: 4rem;
+    padding: 44px 40px 40px;
+    transition: @transition-time;
+    transform: translateX(100%);
+    color: @color-text;
+    background-color: @color-text-reverse;
+
+    @media screen and (min-width: @hamburger) {
+      position: static;
+      overflow: visible;
+      width: auto;
+      height: auto;
+      //padding-top: 0;
+      //padding-bottom: 0;
+      padding: 0;
+      transition: none;
+      transform: none;
+      color: inherit;
+      background-color: transparent;
+    }
+  }
+
+  &__partner-btn {
+    margin-top: 2.4rem;
+
+    & .btn {
+      //margin: 0 auto;
+    }
+
+    @media screen and (min-width: @hamburger) {
+      display: none !important;
+    }
+  }
+
+  &__mobile-menu.active {
+    transform: none;
+  }
+
+  &__mobile-menu,
+  &__right {
+    transition: @transition;
+
+    @media screen and (min-width: @hamburger) {
+      padding-top: 1.2rem;
+
+      .header.is-moved & {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__nav-list {
+    list-style-type: none;
+
+    @media screen and (min-width: @hamburger) {
+      display: flex;
+    }
+  }
+
+  &__nav-item {
+    display: block;
+
+    @media screen and (min-width: @hamburger) {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__nav-item:not(:last-child) {
+    margin-bottom: 2.4rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-right: 2.4rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and (min-width: @hamburger) {
+      position: relative;
+      font-weight: 500;
+      text-transform: unset;
+    }
+  }
+
+  &__nav-link:not(:last-child) {
+    margin-bottom: 1.6rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link::after {
+    @media screen and (min-width: @hamburger) {
+      position: absolute;
+      bottom: -0.9rem;
+      left: 0;
+
+      width: 0;
+      height: 0.2rem;
+
+      content: '';
+      transition: width @transition-time;
+    }
+  }
+
+  &__nav-item::before {
+    @media screen and (min-width: @hamburger) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      width: 0;
+      height: 6rem;
+
+      content: '';
+    }
+  }
+
+  &__nav-item:focus-within::after,
+  &__nav-link:hover::after,
+  &__nav-link:focus::after {
+    @media screen and (min-width: @hamburger) {
+      width: 100%;
+
+      background-color: @color-brand;
+    }
+  }
+
+  &__dropdown {
+    @media screen and (min-width: @hamburger) {
+      position: absolute;
+      top: ~'calc(100% + 2.6rem)';
+      left: 0;
+      visibility: hidden;
+
+      width: max-content;
+      padding-top: 2rem;
+      padding-bottom: 1.2rem;
+
+      // transition: @transition-time;
+      opacity: 0;
+      //color: @color-text;
+      color: #fff;
+      //background-color: @color-text-reverse;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      font-size: 1.3rem;
+    }
+  }
+
+  &__nav-arrow {
+    display: none;
+
+    @media screen and (min-width: @hamburger) {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-left: 4px;
+      transition: transform .2s ease-in;
+    }
+  }
+
+  &__nav-item:hover &__nav-arrow {
+    @media screen and (min-width: @hamburger) {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__nav-item:hover::before {
+    @media screen and (min-width: @hamburger) {
+      width: 100%;
+    }
+  }
+
+  &__nav-item:focus-within &__dropdown,
+  &__nav-item:hover &__dropdown {
+    @media screen and (min-width: @hamburger) {
+      visibility: visible;
+      // transition-delay: 0s;
+      opacity: 1;
+      transition: .4s opacity ease-out;
+    }
+  }
+
+  &__dropdown-list {
+    list-style-type: none;
+  }
+
+  &__dropdown-list:not(:last-child) {
+    position: relative;
+    margin-bottom: 1.8rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__dropdown-list:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 200px;
+    height: 0.2rem;
+    background-color: @color-brand;
+    font-size: 6.4rem;
+
+    @media screen and (min-width: @hamburger) {
+      bottom: -1.6rem;
+      left: 50%;
+      width: ~'calc(100% - 4rem)';
+      transform: translateX(-50%);
+    }
+  }
+
+  &__dropdown-link {
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    justify-content: unset;
+    //padding-top: 0.4rem;
+    //padding-bottom: 0.4rem;
+    padding: 0.6rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: @transition-time;
+
+    @media screen and (min-width: @hamburger) {
+      padding: 1.2rem 2rem;
+      font-weight: 400;
+    }
+  }
+
+  &__dropdown-link:hover,
+  &__dropdown-link:focus {
+    color: @color-brand;
+    background-color: @color-bg-hover;
+  }
+
+  &__dropdown-icon {
+
+    & svg {
+      display: block;
+      width: 34px;
+      height: 34px;
+      transition: @transition;
+
+      @media screen and (min-width: @hamburger) {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__dropdown-link:hover svg,
+  &__dropdown-link:focus svg {
+    fill: @color-brand;
+  }
+
+  &__dropdown-caption {
+    margin-left: 16px;
+  }
+
+  &__socials.socials {
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+    justify-content: left;
+
+    @media screen and (min-width: @hamburger) {
+      display: none;
+    }
+  }
+
+
+  &__socials,
+  &__phone-link_mobile {
+    @media screen and (min-width: @hamburger) {
+      display: none !important;
+    }
+  }
+
+  &__right {
+    display: flex;
+    color: @color-text-reverse;
+    align-items: center;
+
+    @media screen and (min-width: @hamburger) {
+      color: inherit;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    transition: transform .3s ease-out;
+
+    @media screen and (min-width: @hamburger) {
+
+      .header.is-moved & {
+        transform: translateY(12px);
+      }
+    }
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 1.2rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+    font-size: 2.4rem;
+    fill: currentColor;
+    transition: @transition;
+  }
+
+  &__link:hover &__icon {
+    fill: @color-brand;
+  }
+
+  &__icon_phone {
+    margin-right: 0.8rem;
+    transition: transform .3s ease-out;
+
+    @media screen and (min-width: @hamburger) {
+      .header.is-moved & {
+        transform: translateY(12px);
+      }
+    }
+  }
+
+  &__phones {
+    display: none;
+
+    @media screen and (min-width: @hamburger) {
+      display: flex;
+    }
+  }
+
+  &__phone-link {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    //justify-content: center;
+    align-items: center;
+    transition: @transition;
+
+    &:hover {
+      color: @color-brand-hover;
+    }
+  }
+
+  &__phone-link:not(:last-child) {
+    margin-bottom: 0.8rem;
+    transform: @transition;
+  }
+
+  &.is-moved &__phone-link:not(:last-child){
+    margin-bottom: 0;
+  }
+}

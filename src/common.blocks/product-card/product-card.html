@@ -1,0 +1,61 @@
+<div class="product-card">
+    <div class="product-card__favorite">
+        <svg>
+            <use xlink:href="#heart-filled"></use>
+        </svg>
+    </div>
+    <div class="product-card__gallery">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <!--Высота изображений 200px-->
+                    <a href="product-page.html" class="product-card__img"
+                        style="background-image: url(${require('./img/product-preview-06.jpg')})"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="product-page.html" class="product-card__img"
+                        style="background-image: url(${require('./img/product-preview-07.png')})"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="product-page.html" class="product-card__img"
+                        style="background-image: url(${require('./img/product-preview-08.jpg')})"></a>
+                </div>
+                <!--
+                <div class="swiper-slide">
+                    <a href="product-page.html" class="product-card__img">
+                        <img src="${require('./img/product-preview-08.jpg')}" alt="Агат аврора">
+                    </a>
+                </div>
+                -->
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="product-card__icons">
+            <span
+                    class="product-card__icon tooltip"
+                    style="background-image: url(${require('./img/spring.svg')});"
+                    data-tippy-content="Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты.">
+            </span>
+            <span
+                    class="product-card__icon tooltip"
+                    style="background-image: url(${require('./img/vacuum-cleaner.svg')});"
+                    data-tippy-content="Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты.">
+            </span>
+        </div>
+    </div>
+    <div class="product-card__text">
+        <div class="product-card__novelty">Новинка</div>
+        <a href="product-page.html" class="product-card__title">Агат аврора</a>
+        <a href="category.html" class="product-card__category">Прямые диваны</a>
+        <div class="product-card__description">
+            Мебель данной коллекции может быть произведена по Вашим размерам, в доступных комплектациях и в различных
+            вариантах обивки.
+        </div>
+        <div class="product-card__price">
+            26 700 ₽
+        </div>
+    </div>
+</div>

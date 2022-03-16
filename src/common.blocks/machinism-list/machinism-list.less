@@ -1,0 +1,69 @@
+@import (reference) '../../less/variables.less';
+
+.machinism-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+    justify-content: center;
+
+    @media (min-width: @tablet) {
+        justify-content: unset;
+        margin: -24px;
+    }
+
+    &__item {
+        padding: 12px;
+        flex: 0 0 150px;
+
+        @media (min-width: @tablet) {
+            flex: 0 0 25%;
+            width: 25%;
+            padding: 24px;
+        }
+    }
+}
+
+.machinism-card {
+    padding: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: @transition;
+
+    &:hover {
+        box-shadow: 0 8px 30px 2px rgba(93, 49, 61, 0.16);
+    }
+
+    @media (min-width: @tablet) {
+        padding: 32px;
+        height: 100%;
+    }
+
+    &__img {
+        background-size: cover;
+        background-position: center;
+        --aspect-ratio: 200/120;
+
+        &:before {
+            content: '';
+            display: block;
+            padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }
+    }
+
+    &__caption {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.25;
+        margin-top: 10px;
+        transition: @transition;
+
+        @media (min-width: @tablet) {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+
+    &:hover &__caption {
+        color: @color-brand;
+    }
+}

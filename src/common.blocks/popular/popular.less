@@ -1,0 +1,346 @@
+@import (reference) '../../less/variables.less';
+
+.popular {
+  padding-top: 0.4rem;
+
+  @media screen and (min-width: @hamburger) {
+    padding-top: 3rem;
+  }
+
+  &__header {
+    margin-bottom: 2.4rem;
+  }
+
+  &__list {
+    padding-right: @container-padding;
+    padding-left: @container-padding;
+
+    list-style-type: none;
+
+    color: @color-text-reverse;
+
+    @media screen and (min-width: @hamburger) {
+      display: grid;
+
+      padding-right: 0;
+      padding-left: 0;
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      'a a b b'
+      'a a c c'
+      'd d e e'
+      'f f e e'
+      'g g h h';
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 0.2rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item_first,
+  &__item_sixth {
+    background-size: cover;
+  }
+
+  &__item_first::before,
+  &__item_fifth::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background-color: @color-bg-half-transparent;
+  }
+
+  &__item_second::before,
+  &__item_third::before,
+  &__item_fourth::before,
+  &__item_sixth::before,
+  &__item_7::before,
+  &__item_8::before {
+    @media screen and (max-width: @hamburger - 1) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: @color-bg-half-transparent;
+    }
+  }
+
+  &__item_third,
+  &__item_sixth,
+  &__item_8 {
+
+    @media screen and (min-width: @hamburger) {
+      color: @color-text;
+      background-color: @color-text-reverse;
+      transition: color .3s ease-out, background-color .3s ease-out;
+
+      &:hover {
+        color: @color-text-reverse;
+        background-color: @color-text;
+      }
+    }
+  }
+
+  &__item_first {
+
+    @media screen and (min-width: @hamburger) {
+      grid-area: a;
+    }
+  }
+
+  &__item_second {
+
+    @media screen and (min-width: @hamburger) {
+      color: @color-text-reverse;
+      background-color: @color-text;
+      background-position: right center;
+      background-size: 60% auto;
+      grid-area: b;
+      transition: color .3s ease-out, background-color .3s ease-out;
+
+      &:hover {
+        color: @color-text;
+        background-color: @color-text-reverse;
+      }
+    }
+  }
+
+  &__item_third {
+
+    @media screen and (min-width: @hamburger) {
+      background-position: left center;
+      background-size: 40% auto;
+      grid-area: c;
+    }
+  }
+
+  &__item_fourth {
+
+    @media screen and (min-width: @hamburger) {
+      color: @color-text-reverse;
+      background-color: @color-text;
+      background-position: right center;
+      background-size: 40% auto;
+      grid-area: d;
+      transition: color .3s ease-out, background-color .3s ease-out;
+
+      &:hover {
+        color: @color-text;
+        background-color: @color-text-reverse;
+      }
+    }
+  }
+
+  &__item_fifth {
+    @media screen and (min-width: @hamburger) {
+      grid-area: e;
+    }
+  }
+
+  &__item_sixth {
+    @media screen and (min-width: @hamburger) {
+      background-position: left center;
+      background-size: 60% auto;
+
+      grid-area: f;
+    }
+  }
+
+  &__item_7 {
+
+    @media screen and (min-width: @hamburger) {
+      color: @color-text-reverse;
+      background-color: @color-text;
+      background-position: right center;
+      background-size: 40% auto;
+      grid-area: g;
+      transition: color .3s ease-out, background-color .3s ease-out;
+
+      &:hover {
+        color: @color-text;
+        background-color: @color-text-reverse;
+      }
+    }
+  }
+
+  &__item_8 {
+    @media screen and (min-width: @hamburger) {
+      background-position: left center;
+      background-size: 40% auto;
+      grid-area: h;
+    }
+  }
+
+  &__item-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .3s ease-out;
+    overflow: hidden;
+
+    & span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: transform .5s ease-out;
+    }
+  }
+
+  @media (min-width: @desktop-small) {
+    &__item_second &__item-bg { width: 60%; left: unset; right: 0; }
+    &__item_third &__item-bg { width: 40%; left: 0; }
+    &__item_fourth &__item-bg { width: 40%; left: unset; right: 0; }
+    &__item_sixth &__item-bg { width: 60%; left: 0; }
+    &__item_7 &__item-bg { width: 40%; left: unset; right: 0; }
+    &__item_8 &__item-bg { width: 60%; left: unset; right: 0; }
+  }
+
+  &__item:hover &__item-bg span {
+    transform: scale(1.08);
+  }
+
+  @media (max-width: calc(@desktop-small - 1px)) {
+    &__item-bg span:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: @color-bg-half-transparent;
+    }
+  }
+
+  &__item-bg_dark span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: @color-bg-half-transparent;
+  }
+
+  &__item-content {
+    position: relative;
+  }
+
+  &__item-link {
+    display: block;
+    position: relative;
+
+    @media screen and (min-width: @hamburger) {
+      height: 100%;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item_second &__item-link {
+    @media screen and (min-width: @hamburger) {
+      padding-right: 60%;
+    }
+  }
+
+  &__item_third &__item-link {
+    @media screen and (min-width: @hamburger) {
+      padding-left: 40%;
+    }
+  }
+
+  &__item_fourth &__item-link {
+    @media screen and (min-width: @hamburger) {
+      padding-right: 40%;
+    }
+  }
+
+  &__item_sixth &__item-link {
+    @media screen and (min-width: @hamburger) {
+      padding-left: 60%;
+    }
+  }
+
+  &__item_7 &__item-link {
+    @media screen and (min-width: @hamburger) {
+      padding-right: 40%;
+    }
+  }
+
+  &__item_8 &__item-link {
+    @media screen and (min-width: @hamburger) {
+      padding-right: 60%;
+    }
+  }
+
+  &__item-content {
+    padding: 4rem 1.6rem;
+
+    @media screen and (min-width: @hamburger) {
+      padding: 4rem 3rem 4rem 4.5rem;
+    }
+  }
+
+  &__item_first &__item-content,
+  &__item_fifth &__item-content {
+    @media screen and (min-width: @hamburger) {
+      padding-right: 120 / 720 * 100%;
+      padding-left: 120 / 720 * 100%;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 1.6rem;
+
+    &:after {
+      transition: width .4s ease-out;
+    }
+  }
+
+  &__item:hover &__item-title:after {
+    width: 100%;
+  }
+
+  &__item-text {
+    line-height: 1.6;
+
+    @media screen and (min-width: @hamburger) {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import (reference) '../../less/variables.less';
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  background-color: @color-page-bg;
+
+  &__main {
+    padding-top: 64px;
+
+    @media (min-width: @desktop-small) {
+      padding-top: unset;
+    }
+
+    .header:not(.header_fixed) + & {
+      @media (min-width: @desktop-small) {
+        padding-top: 114px;
+      }
+    }
+  }
+
+  &_bg_second {
+    background-color: @color-page-bg-second;
+  }
+
+  &__warehouse {
+    margin: 3.2rem @container-padding 4rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin: 0 0 0.2rem;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+}

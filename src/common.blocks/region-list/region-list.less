@@ -1,0 +1,45 @@
+@import (reference) '../../less/variables.less';
+
+.region-wrap {
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    & .page-title {
+        margin-bottom: 24px;
+    }
+}
+
+.region-list {
+    column-count: 1;
+    column-gap: 50px;
+    list-style: none;
+
+    @media (min-width: @tablet) {
+        column-count: 2;
+    }
+
+    @media (min-width: @desktop) {
+        column-count: 3;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        font-size: 15px;
+        text-decoration: underline;
+        display: block;
+        padding: 5px 0;
+        transition: @transition;
+
+        &:hover {
+            color: @color-brand;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import (reference) '../../less/variables.less';
+
+.address {
+
+  @media (min-width: @desktop) {
+    display: flex;
+  }
+
+  &__map {
+    margin-bottom: 20px;
+
+    @media (min-width: @desktop) {
+      margin-bottom: unset;
+      flex: 0 0 50%;
+      width: 50%;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: @desktop) {
+      height: 550px;
+      padding-right: 50px;
+      flex: 0 0 50%;
+      width: 50%;
+    }
+  }
+
+  &__item {
+
+    @media (min-width: @desktop) {
+
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+.address-item {
+  display: block;
+  padding: 16px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: @transition;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    @media (min-width: @desktop) {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__address {
+    font-size: 13px;
+    color: #9b9b9b;
+    margin-bottom: 10px;
+
+    @media (min-width: @desktop) {
+      font-size: 15px;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__phone-icon {
+    fill: @color-brand;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__phone-value {
+    padding-left: 4px;
+  }
+
+}
+
+.address-map {
+  height: 230px;
+
+  @media (min-width: @desktop) {
+    height: 430px;
+  }
+}

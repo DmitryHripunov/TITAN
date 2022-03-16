@@ -1,0 +1,26 @@
+@import (reference) '../../less/variables.less';
+
+.input-file {
+    display: flex;
+
+    & input {
+        opacity: 0;
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    & label {
+        color: white;
+        background-color: @color-brand;
+        display: flex;
+
+        & svg {
+            fill: #fff;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+}

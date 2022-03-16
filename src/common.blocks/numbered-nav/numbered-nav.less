@@ -1,0 +1,129 @@
+@import (reference) '../../less/variables.less';
+
+.numbered-nav {
+    list-style: none;
+    counter-reset: checkout-section;
+    margin: -12px;
+
+    @media (min-width: @tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media (min-width: @desktop) {
+        margin: -24px;
+    }
+
+    &__item {
+
+        @media (min-width: @tablet) {
+            flex: 0 0 calc(100% / 3);
+            max-width: calc(100% / 3);
+            padding: 12px;
+        }
+
+        @media (min-width: @desktop) {
+            flex: 0 0 25%;
+            width: 25%;
+            padding: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+
+            @media (min-width: @tablet) {
+                margin-bottom: unset;
+            }
+        }
+    }
+}
+.numbered-nav-el {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+
+    &:before {
+        content: counter(checkout-section);
+        counter-increment: checkout-section;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+        background-color: #d9d9d9;
+        font-size: 25px;
+        color: #fff;
+        border-radius: 100%;
+        transition: @transition;
+        display: none;
+
+        @media (min-width: @desktop) {
+            width: 128px;
+            height: 128px;
+            font-size: 60px;
+            font-weight: 300;
+        }
+    }
+
+    &:hover:before {
+        background-color: @color-brand;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+        background-color: #d9d9d9;
+        font-size: 25px;
+        color: #fff;
+        border-radius: 100%;
+        transition: @transition;
+
+        @media (min-width: @desktop) {
+            width: 128px;
+            height: 128px;
+        }
+
+        & svg {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            fill: @color-brand;
+            transition: @transition;
+
+            @media (min-width: @desktop) {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+
+    &:hover &__img {
+        background-color: @color-brand;
+    }
+
+    &:hover &__img svg {
+        fill: #fff;
+    }
+
+    &__caption {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 20px;
+        transition: @transition;
+
+        @media (min-width: @desktop) {
+            font-size: 25px;
+            margin-top: 32px;
+        }
+    }
+
+    &:hover &__caption {
+        color: @color-brand;
+    }
+}

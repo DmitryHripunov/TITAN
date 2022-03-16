@@ -1,0 +1,117 @@
+@import (reference) '../../less/variables.less';
+
+.instagram-feed {
+  background-color: @color-bg-grey;
+
+  @media screen and (min-width: @hamburger) {
+    display: flex;
+  }
+
+  &__header {
+    @media screen and (min-width: @hamburger) {
+      position: relative;
+
+      box-sizing: border-box;
+        //width: 268 / 1440 * 100%;
+        flex: 0 0 18.5%;
+        width: 18.5%;
+        padding-top: 18.5%;
+
+      flex-shrink: 0;
+    }
+  }
+
+  &__header-inner {
+    padding: 1.6rem;
+
+    color: @color-text-reverse;
+
+    @media screen and (min-width: @hamburger) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      box-sizing: border-box;
+      width: max-content;
+      max-width: 100%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    display: flex;
+
+    transition: color @transition-time;
+
+    font-size: 1.5rem;
+    line-height: 1.4;
+
+    align-items: center;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: @color-brand;
+  }
+
+  &__icon {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.8rem;
+
+    font-size: 2rem;
+
+    fill: currentColor;
+  }
+
+    &__slider {
+
+        @media (min-width: @desktop-small) {
+            flex: 0 0 calc(1172 / 1440 * 100%);
+            width: 1172 / 1440 * 100%;
+        }
+    }
+
+  &__item {
+    overflow: hidden;
+    width: 62.5%;
+
+    @media (orientation: landscape) {
+      width: 268 / 1171 * 100%;
+    }
+
+    @media screen and (min-width: @hamburger) {
+      width: 268 / 1171 * 100%;
+    }
+  }
+
+  &__bg {
+    transform: scale(1.05);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    --aspect-ratio: 1/1;
+    transition: transform 0.5s ease-out;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }
+  }
+
+  &__item:hover &__bg {
+    transform: scale(1.12);
+  }
+
+  &__img {
+    display: block;
+
+    max-width: 100%;
+  }
+}

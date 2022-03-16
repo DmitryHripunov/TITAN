@@ -1,0 +1,105 @@
+@import (reference) '../../less/variables.less';
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1.8rem;
+
+  cursor: pointer;
+  transition: background-color @transition-time;
+  text-align: center;
+
+  color: @color-text-reverse;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: @color-brand;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.07;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    pointer-events: none;
+  }
+
+  &:before {
+    left: -25px;
+    top: 50%;
+    width: 6px;
+    height: 200%;
+    transform: translate(0, -50%) rotate(30deg) scaleX(1);
+    opacity: .4;
+  }
+
+  &:after {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @color-brand-hover;
+
+    &:before {
+      animation: slide .4s ease-out;
+    }
+
+    &:after {
+      animation: blink .6s ease-out;
+    }
+  }
+
+  @-webkit-keyframes slide {
+    0% { left: -25px; transform: translate(0, -50%) rotate(30deg) scaleX(1); }
+    100% { left: 120%; transform: translate(0, -50%) rotate(30deg) scaleX(8); }
+  }
+
+  @-webkit-keyframes blink {
+    0% { opacity: 0; }
+    40% { opacity: .3; }
+    100% { opacity: 0; }
+  }
+
+  &:active {
+    background-color: @color-brand-active;
+  }
+
+  &_with-icon {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+
+  &_small,
+  &_secondary {
+    padding: 1.6rem;
+  }
+
+  &_secondary {
+    letter-spacing: 0.034rem;
+
+    color: @color-text;
+    background-color: @color-secondary-btn-bg;
+
+    font-size: 1.4rem;
+  }
+
+  &_secondary:hover,
+  &_secondary:focus {
+    color: @color-text-reverse;
+    background-color: @color-secondary-btn-bg-hover;
+  }
+
+  &_secondary:active {
+    background-color: @color-secondary-btn-bg-active;
+  }
+}

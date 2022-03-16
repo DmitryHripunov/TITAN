@@ -1,0 +1,266 @@
+@import (reference) '../../less/variables.less';
+
+.product-card {
+  position: relative;
+  padding: 24px;
+  background-color: #fff;
+  transition: @transition;
+
+  @media screen and (min-width: @desktop-small) {
+    // padding: 32px;
+    padding: 16px;
+  }
+
+  &:hover {
+    box-shadow: 0 8px 30px 2px rgba(93, 49, 61, 0.16);
+  }
+
+  &__favorite {
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+
+    @media screen and (min-width: @tablet) {
+      top: 32px;
+      right: 32px;
+    }
+
+    & svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+      stroke: #A0A0A0;
+      transition: @transition;
+    }
+
+    &:hover svg {
+      stroke: @color-brand;
+    }
+
+    &.is-active svg {
+      fill: @color-brand;
+      stroke: @color-brand;
+    }
+  }
+
+  &__gallery {
+    margin: 0 0 16px;
+    position: relative;
+
+    @media (min-width: @desktop) {
+      margin: 0 -20px 16px;
+    }
+  }
+
+  &__img {
+    height: 155px;
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: @desktop) {
+      height: 200px;
+    }
+
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    --aspect-ratio: 16/9;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }
+  }
+
+  & .swiper-container {
+
+    @media (min-width: @desktop) {
+      padding: 0 25px;
+    }
+  }
+
+  & .swiper-wrapper {
+
+  }
+
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    display: none;
+    width: 30px;
+    background-color: #fff;
+    height: 100%;
+    transform: none;
+    top: 0;
+    margin-top: unset;
+
+    @media (min-width: @desktop) {
+      display: flex;
+    }
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      transition: @transition;
+    }
+
+    &:hover svg {
+      fill: @color-brand;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  & .swiper-button-prev {
+    left: -5px;
+  }
+
+  & .swiper-button-next {
+    right: -5px;
+  }
+
+  & .swiper-pagination {
+    display: flex;
+    margin-top: 8px;
+    justify-content: center;
+    position: unset;
+  }
+
+  & .swiper-pagination .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    margin: 0;
+    opacity: 1 !important;
+    background-color: #e0e0e0;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+
+  }
+
+  & .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  & .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: @color-brand;
+  }
+
+  &__text {
+    position: relative;
+  }
+
+  &__novelty {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 53px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @color-brand;
+    color: #fff;
+    font-size: 9px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 8px;
+    padding-right: 60px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: @desktop) {
+      font-size: 25px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: @color-brand;
+    }
+  }
+
+  &__category {
+    display: block;
+    margin-bottom: 8px;
+    color: @color-gray;
+    font-size: 13px;
+
+    @media screen and (min-width: @tablet) {
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: @desktop) {
+      font-size: 15px;
+    }
+  }
+
+  &__price {
+    color: @color-brand;
+    font-size: 17px;
+
+    @media screen and (min-width: @desktop-small) {
+      font-size: 25px;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+    display: flex;
+    z-index: 50;
+  }
+
+  &__icon {
+    border: 1px solid #cfcfcf;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    padding: 6px;
+    cursor: pointer;
+    background: #ffffff no-repeat center / contain;
+    background-origin: content-box;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>О компании</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+
+<div class="page-wrapper" id="vue-app">
+
+    ${require('./common.blocks/header/header-fixed.html')}
+
+    <div class="about-head" style="background-image: url('${require('./common.blocks/about/img/about-bg.jpg')}');">
+        <div class="about-head__caption">Компания «STOPМебель»</div>
+    </div>
+
+    <main class="page-wrapper__main">
+
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" href="/" itemprop="item">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="0" />
+                    </li>
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <div class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">О компании</span>
+                        </div>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-frame">
+
+            <div class="container">
+
+                <article class="about-page">
+
+                    <div class="about-page__column">
+                        <h1 class="page-title">
+                            <span>О компании</span>
+                        </h1>
+                        <h2 class="about-page__subtitle">Мы – фабрика дизайнерской мебели STOPМебель.</h2>
+                        <p>
+                            Наша мягкая мебель — это настоящее воплощение итальянского стиля. В производстве используем только экологически чистые материалы — массив дерева. Практически любой диван имеет раскладной механизм, кровати, как и диваны, могут быть оснащены ящиком для хранения белья.
+                        </p>
+                        <figure>
+                            <img src="${require('./common.blocks/about/img/about.png')}" alt="Производство Stopмебель" />
+                            <figcaption>Производство Stopмебель</figcaption>
+                        </figure>
+                        <p>
+                            В ассортименте ткани от Instroy & mebel-art, VIP-текстиль, Mebelliery. Также для продления срока службы диванов и кресел мы предлагаем съемные чехлы. Они износоустойчивы, надежны, просты в обслуживании.
+                        </p>
+                        <p>
+                            Материалы для обивки отбираются нашими дизайнерами из актуальных коллекций — предлагается более 7000 вариантов.
+                        </p>
+                        <h2 class="about-page__subtitle">Stopмебель — живите комфортно!</h2>
+                    </div>
+
+                    <div class="about-page__column">
+                        <h2 class="page-title">
+                            <span>Сертификаты</span>
+                        </h2>
+                        <div class="about-page__link">
+                            <a href="${require('./common.blocks/about/img/about.png')}" download>Сертификат соответствия</a>
+                        </div>
+                        <div class="about-page__link">
+                            <a href="${require('./common.blocks/about/img/about.png')}" download>Декларация о соответствии</a>
+                        </div>
+                    </div>
+
+                </article>
+
+                <section class="section">
+
+                    <h2 class="page-title page-title_secondary">
+                        <span>Наши дипломы</span>
+                    </h2>
+
+                    ${require('./common.blocks/swiper-diplom/swiper-diplom.html')}
+
+                </section>
+
+            </div>
+
+        </div>
+
+        ${require('./common.blocks/section-services/section-services.html')}
+
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+</div>
+
+${require('./common.blocks/popup/popup-partner.html')}
+
+${require('./common.blocks/popup/popup-ask.html')}
+
+${require('./common.blocks/popup/popup-order.html')}
+
+</body>
+
+</html>

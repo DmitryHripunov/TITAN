@@ -1,0 +1,46 @@
+@import (reference) '../../less/variables.less';
+
+.instagram-gallery {
+    margin-top: 30px;
+    grid-gap: 36px;
+    display: grid;
+    grid-template:
+        'inst-1 inst-1'
+        'inst-2 inst-3'
+        'inst-4 inst-5';
+
+    @media (min-width: @desktop-small) {
+        grid-template:
+            'inst-1 inst-1 inst-2 inst-3'
+            'inst-1 inst-1 inst-4 inst-5';
+    }
+
+    &__item {
+        overflow: hidden;
+    }
+
+    &__item:nth-child(1) { grid-area: inst-1; }
+    &__item:nth-child(2) { grid-area: inst-2; }
+    &__item:nth-child(3) { grid-area: inst-3; }
+    &__item:nth-child(4) { grid-area: inst-4; }
+    &__item:nth-child(5) { grid-area: inst-5; }
+
+    &__bg {
+        transform: scale(1.05);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        --aspect-ratio: 1/1;
+        transition: transform 0.5s ease-out;
+
+        &:before {
+            content: '';
+            display: block;
+            padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }
+    }
+
+    &__item:hover &__bg {
+        transform: scale(1.12);
+    }
+}

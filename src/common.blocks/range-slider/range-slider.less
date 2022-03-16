@@ -1,0 +1,61 @@
+@import (reference) '../../less/variables.less';
+
+.range-slider {
+    padding-bottom: 25px;
+}
+
+.range-slider__frame {
+    padding: 0 10px;
+
+    .slider.slider-horizontal {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slider.slider-horizontal .slider-track,
+    .slider-selection,
+    .slider-track-low,
+    .slider-track-high {
+        background-image: none;
+        background-color: @color-text;
+        box-shadow: none;
+        border-radius: unset;
+    }
+
+    .slider.slider-horizontal .slider-track {
+        margin-top: 0;
+        height: 1px;
+    }
+
+    .slider-handle {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-image: none;
+        border: 1px solid @color-brand;
+        background-color: #fff;
+        transition: @transition;
+
+        &:hover {
+            background-color: @color-brand;
+        }
+    }
+
+    .slider.slider-horizontal .tooltip {
+        transform: none;
+        margin-top: 25px;
+        margin-left: -10px;
+        margin-right: -10px;
+        top: 0;
+        font-size: 12px;
+    }
+}
+
+.range-slider__input {
+
+    &_length {
+
+    }
+}
+

@@ -1,0 +1,158 @@
+@import (reference) '../../less/variables.less';
+
+.warehouse-program {
+  padding-bottom: 0;
+
+  &__content {
+    margin-bottom: 80px;
+
+    h2 {
+      margin-bottom: 16px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+
+    a {
+      display: block;
+      color: @color-brand;
+      text-decoration: underline;
+      font-size: 15px;
+      transition: @transition;
+    }
+  }
+    
+  &__product-list-container {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__list-title {
+    margin-bottom: 40px;
+    font-weight: normal;
+  }
+
+  &__order-link {
+    margin: 0 auto;
+    text-align: center;
+    color: @color-brand;
+    
+    border-bottom: 1px dashed;
+  }
+
+  &__product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (min-width: @tablet) {
+      gap: 20px;
+    }
+
+    @media screen and (min-width: @desktop) {
+      gap: 50px;
+    }
+  }
+
+  &__product-item {
+    width: 100%;
+    height: auto;
+    background-color: @color-text-reverse;
+     overflow: hidden;
+
+    @media screen and (min-width: @tablet) {
+      max-width: 50%;
+      width: 360px;
+      flex-grow: 1;
+    }
+  }
+
+  &__product-link {
+    img {
+      width: 100%;
+      height: auto;
+      transition: @transition;
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__partner {
+    padding: 80px 0;
+    background-color: @color-text-reverse;
+  }
+
+  &__partner-title {
+    margin-bottom: 40px;
+    font-weight: normal;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media screen and (min-width: @desktop) {
+      flex-direction: row;
+      gap: 49px;
+    }
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: @tablet) {
+      flex-direction: row;
+      gap: 16px;
+      
+      flex-grow: 1;
+      min-width: 70%;
+
+      .form__group {
+        flex-grow: 1;
+      }
+
+      .form__group:last-of-type {
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width: @desktop) {
+      min-width: 783px;
+      gap: 31px;
+    }
+  }
+
+  &__privacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 20px;
+    color: @color-gray;
+  }
+
+  &__privacy-link {
+    color: @color-brand;
+  }
+
+  &__form-btn {
+    @media screen and (min-width: @desktop) {
+      width: 100%;
+    }
+  }
+}

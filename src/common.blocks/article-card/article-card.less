@@ -1,0 +1,95 @@
+@import (reference) '../../less/variables.less';
+
+.article-card {
+    display: block;
+    padding: 16px;
+    background-color: #fff;
+    height: 100%;
+    transition: @transition;
+
+    &:hover {
+        box-shadow: 0 8px 30px 2px rgba(93, 49, 61, 0.16);
+    }
+
+    @media (min-width: @tablet) {
+        padding: 40px;
+    }
+
+    &__title {
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        @media (min-width: @tablet) {
+            font-size: 25px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 20px;
+        --aspect-ratio: 16/9;
+
+        &:before {
+            content: '';
+            display: block;
+            padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }
+
+        @media (min-width: @tablet) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__description {
+        font-size: 13px;
+        margin-bottom: 15px;
+
+        @media (min-width: @tablet) {
+            font-size: 15px;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link {
+        color: @color-brand;
+        text-decoration: underline;
+        font-size: 13px;
+        transition: @transition;
+
+        @media (min-width: @tablet) {
+            font-size: 15px;
+        }
+    }
+
+    &:hover &__link {
+        color: @color-brand-hover;
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+    }
+
+    &__date-icon {
+
+        & svg {
+            fill: #ccc;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__date-value {
+        padding-left: 5px;
+        color: #9b9b9b;
+        white-space: nowrap;
+    }
+}

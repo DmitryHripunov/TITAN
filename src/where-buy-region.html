@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пенза</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ebbe0f87-4545-4d85-9f47-cff0cf4de2bf&lang=ru_RU"></script>
+</head>
+
+<body class="body">
+
+<div class="page-wrapper" id="vue-app">
+
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="page-wrapper__main">
+
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" href="/" itemprop="item">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="0" />
+                    </li>
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <div class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Где купить?</span>
+                        </div>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <div class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Пенза</span>
+                        </div>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-frame">
+
+            <div class="container">
+
+                <h1 class="page-title">
+                    <span>Пенза</span>
+                </h1>
+
+                ${require('./common.blocks/address-block/address-block.html')}
+
+            </div>
+
+        </div>
+
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+</div>
+
+${require('./common.blocks/popup/popup-partner.html')}
+
+${require('./common.blocks/popup/popup-ask.html')}
+
+${require('./common.blocks/popup/popup-order.html')}
+
+</body>
+
+</html>

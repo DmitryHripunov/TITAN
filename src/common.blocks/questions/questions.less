@@ -1,0 +1,122 @@
+@import (reference) '../../less/variables.less';
+
+.questions {
+  padding-top: 4rem;
+  background-color: @color-page-bg-second;
+
+  @media screen and (min-width: @hamburger) {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+
+  &__text {
+    @media screen and (min-width: @hamburger) {
+      margin-top: 4rem;
+
+      font-size: 1.5rem;
+    }
+  }
+
+  &__phones-wrapper {
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+
+    @media screen and (min-width: @hamburger) {
+      display: flex;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__phones-item {
+
+    @media screen and (min-width: @hamburger) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__phone-caption {
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    display: block;
+    font-size: 2rem;
+
+    @media screen and (min-width: @hamburger) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__phone:not(:last-child) {
+    margin-bottom: 0.8rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-right: 2.4rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone:hover,
+  &__phone:focus {
+    color: @color-brand;
+  }
+
+  &__link-group {
+    margin-top: 3.2rem;
+
+    @media screen and (min-width: @hamburger) {
+      display: flex;
+      justify-content: center;
+      margin-top: 4.6rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    box-sizing: border-box;
+    min-width: 26rem;
+    padding: 1.6rem 4rem;
+    transition: @transition;
+    border: 0.2rem solid @color-black;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      color: @color-brand;
+      border-color: @color-brand;
+    }
+
+    @media screen and (min-width: @hamburger) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__link:not(:last-child) {
+    margin-bottom: 1.6rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-right: 3.2rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: 0.4rem;
+    transition: @transition;
+  }
+
+  &__link:hover &__icon {
+    fill: @color-brand;
+  }
+}

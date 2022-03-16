@@ -1,0 +1,51 @@
+@import (reference) '../../less/variables.less';
+
+.page-frame {
+  padding: 40px 0;
+
+  &_white {
+
+    @media (min-width: @tablet) {
+      background-color: #fff;
+    }
+  }
+}
+
+.page-title {
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  display: flex;
+
+  @media (min-width: @desktop) {
+    font-size: 20px;
+    margin: 0 0 45px;
+  }
+
+  & span {
+    padding-bottom: 5px;
+    border-bottom: 3px solid @color-brand;
+    margin-bottom: -1px;
+  }
+
+  &_secondary {
+
+    & span {
+      border-bottom: 3px solid transparent;
+    }
+  }
+}
+
+.page-subtitle {
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+
+  @media (min-width: @desktop) {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,47 @@
+@import (reference) '../../less/variables.less';
+
+.brand-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -12px;
+
+    &__item {
+        padding: 12px;
+        flex: 0 0 calc(100% / 2);
+        max-width: calc(100% / 2);
+
+        @media (min-width: @tablet) {
+            flex: 0 0 calc(100% / 3);
+            max-width: calc(100% / 3);
+        }
+    }
+}
+
+.brand {
+    display: block;
+
+    &__img {
+        height: 100px;
+
+        & img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__title {
+        padding-top: 5px;
+        color: @color-brand;
+        text-decoration: underline;
+        text-align: center;
+        transition: color .3s ease-out;
+    }
+
+    &:hover &__title {
+        color: @color-brand-hover;
+    }
+}

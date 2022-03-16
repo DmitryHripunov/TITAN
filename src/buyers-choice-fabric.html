@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Как подобрать ткань?</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+
+<div class="page-wrapper" id="vue-app">
+
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="page-wrapper__main">
+
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" href="/" itemprop="item">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="0" />
+                    </li>
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" href="buyers.html" itemprop="item">
+                            <span itemprop="name">Покупателям</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <div class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Как подобрать ткань?</span>
+                        </div>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-frame page-frame_white">
+
+            <div class="container">
+
+                <h1 class="page-title">
+                    <span>Как подобрать ткань?</span>
+                </h1>
+
+                <article class="article">
+
+                    <p>
+                        За свою, многолетнюю, деятельность в сфере производства мягкой мебели, нашей компанией удалось завоевать репутацию принципиального, надежного, порядочного и делового партнера, заслужить доверие и уважение своих клиентов.
+                    </p>
+
+                    <p>
+                        К материалам, применяемым при производстве мягкой мебели предъявляется множество требований. В особой степени это касается обивки, т. е. мебельных тканей. Ткани, которые используются в мебельном производстве, должны иметь ряд качеств, таких как:
+                    </p>
+
+                    <div class="article__list">
+                        <ul>
+                            <li>
+                                устойчивость с износу и истиранию;
+                            </li>
+                            <li>
+                                сопротивляемость к возгоранию;
+                            </li>
+                            <li>
+                                хорошо сохранять цвет;
+                            </li>
+                            <li>
+                                воздухопроницаемость;
+                            </li>
+                            <li>
+                                отсутствие способности наэлектризовываться;
+                            </li>
+                            <li>
+                                гипоаллергенность.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="article__gallery">
+                        <ul>
+                            <li>
+                                <img src="${require('./common.blocks/article/img/article-img-1.png')}" alt="">
+                            </li>
+                            <li>
+                                <img src="${require('./common.blocks/article/img/article-img-2.png')}" alt="">
+                            </li>
+                            <li>
+                                <img src="${require('./common.blocks/article/img/article-img-3.png')}" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+</div>
+
+${require('./common.blocks/popup/popup-partner.html')}
+
+${require('./common.blocks/popup/popup-ask.html')}
+
+${require('./common.blocks/popup/popup-order.html')}
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@import (reference) '../../less/variables.less';
+
+.common-box {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @media screen and (min-width: @hamburger) {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-top: 2.4rem;
+
+    @media screen and (min-width: @hamburger) {
+      margin-top: 3.2rem;
+    }
+  }
+}

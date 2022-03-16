@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Покупателям</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+
+<div class="page-wrapper" id="vue-app">
+
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="page-wrapper__main">
+
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" href="/" itemprop="item">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="0" />
+                    </li>
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <div class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">Покупателям</span>
+                        </div>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-frame page-frame_white">
+
+            <div class="container">
+
+                <h1 class="page-title">
+                    <span>Покупателям</span>
+                </h1>
+
+                <ol class="numbered-nav">
+                    <li class="numbered-nav__item">
+                        <a href="buyers-catalog.html" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Каталоги продукции</div>
+                        </a>
+                    </li>
+                    <li class="numbered-nav__item">
+                        <a href="buyers-machinisms.html" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Механизмы трансформации</div>
+                        </a>
+                    </li>
+                    <li class="numbered-nav__item">
+                        <a href="buyers-change-size.html" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Можно ли изменить размер дивана?</div>
+                        </a>
+                    </li>
+                    <li class="numbered-nav__item">
+                        <a href="buyers-choice-fabric.html" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Как подобрать ткань?</div>
+                        </a>
+                    </li>
+                    <li class="numbered-nav__item">
+                        <a href="buyers-carcass.html" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Каркас мягкой мебели</div>
+                        </a>
+                    </li>
+                    <li class="numbered-nav__item">
+                        <a href="#" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Гарантия</div>
+                        </a>
+                    </li>
+                    <li class="numbered-nav__item">
+                        <a href="buyers-filling.html" class="numbered-nav-el">
+                            <span class="numbered-nav-el__img">
+                                <svg>
+                                    <use xlink:href="#logo-short"></use>
+                                </svg>
+                            </span>
+                            <div class="numbered-nav-el__caption">Наполнение мягкой мебели</div>
+                        </a>
+                    </li>
+                </ol>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+</div>
+
+${require('./common.blocks/popup/popup-partner.html')}
+
+${require('./common.blocks/popup/popup-ask.html')}
+
+${require('./common.blocks/popup/popup-order.html')}
+
+</body>
+
+</html>
