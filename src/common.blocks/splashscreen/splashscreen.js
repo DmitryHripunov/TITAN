@@ -1,11 +1,11 @@
-const splashScreen = $('.splashscreen');
+// const splashScreen = $('.splashscreen');
 
-$(document).ready(() => {
-  splashScreen.removeClass('is-active');
-});
+// $(document).ready(() => {
+//   splashScreen.removeClass('is-active');
+// });
 
-function timeout() {
-  splashScreen.removeClass('timeout');
-}
+// function timeout() {
+//   splashScreen.removeClass('timeout');
+// }
 
-setTimeout(timeout, 3000);
+// setTimeout(timeout, 3000);

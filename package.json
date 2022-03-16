@@ -1,14 +1,10 @@
 {
-  "name": "meat-mark",
+  "name": "TITAN",
   "version": "0.0.1",
   "description": "Верстка сайта Бессновская марка",
-  "repository": {
-    "type": "git",
-    "url": "https://onlinebees.visualstudio.com/meat-mark"
-  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --watch",
-    "dev-hot": "cross-env NODE_ENV=development webpack-dev-server --open --hot --watch",
+    "dev-hot": "cross-env NODE_ENV=development webpack-dev-server --open --watch",
     "build": "cross-env NODE_ENV=development webpack",
     "production": "cross-env NODE_ENV=production webpack"
   },
