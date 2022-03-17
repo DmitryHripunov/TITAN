@@ -2,11 +2,12 @@
 
 .questions {
   padding-top: 4rem;
+  padding-bottom: 30px;
   background-color: @color-page-bg-second;
 
   @media screen and (min-width: @hamburger) {
     padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-bottom: 80px;
   }
 
   &__title {
@@ -14,10 +15,13 @@
   }
 
   &__text {
-    @media screen and (min-width: @hamburger) {
-      margin-top: 4rem;
+    display: block;
+    margin-bottom: 8px;
 
-      font-size: 1.5rem;
+    @media screen and (min-width: @hamburger) {
+      margin-bottom: 16px;
+      font-weight: 500;
+      font-size: 16px;
     }
   }
 
@@ -30,43 +34,48 @@
       margin-top: 2rem;
       margin-bottom: 3rem;
       align-items: center;
-      justify-content: space-between;
+      grid-gap: 0 3.2rem;
     }
   }
 
   &__phones-item {
 
     @media screen and (min-width: @hamburger) {
-      flex: 0 0 50%;
-      max-width: 50%;
+      flex: 0 1 376px;
     }
   }
 
   &__phone-caption {
-    margin-bottom: 10px;
-  }
-
-  &__phone {
-    display: block;
-    font-size: 2rem;
+    margin-top: 4px;
+    font-size: 10px;
+    margin-bottom: 20px;
+    color: @color-dark-h;
 
     @media screen and (min-width: @hamburger) {
-      font-size: 3.5rem;
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+
+    &_hidden {
+      opacity: 0;
     }
   }
 
-  &__phone:not(:last-child) {
-    margin-bottom: 0.8rem;
+  &__phone {
+    display: inline-block;
+    font-size: 16px;
+    color: @color-brand;
 
     @media screen and (min-width: @hamburger) {
-      margin-right: 2.4rem;
-      margin-bottom: 0;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
     }
   }
 
   &__phone:hover,
   &__phone:focus {
-    color: @color-brand;
+    color: @color-dark-h;
   }
 
   &__link-group {
@@ -74,7 +83,7 @@
 
     @media screen and (min-width: @hamburger) {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       margin-top: 4.6rem;
     }
   }
@@ -98,7 +107,7 @@
     }
 
     @media screen and (min-width: @hamburger) {
-      flex: 1 1 100%;
+      flex: 0 1 376px;
     }
   }
 

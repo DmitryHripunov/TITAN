@@ -73,6 +73,11 @@
     height: 40px;
 
     fill: @color-text-reverse;
+
+    @media screen and (min-width: @hamburger) {
+      width: 190px;
+      height: 56px;
+    }
   }
 
   &__mobile-menu {
@@ -99,7 +104,7 @@
       transform: none;
       color: inherit;
       background-color: transparent;
-    }
+      }
   }
 
   &__partner-btn {
@@ -172,6 +177,7 @@
 
     @media screen and (min-width: @hamburger) {
       display: flex;
+      grid-gap: 0 20px;
     }
   }
 

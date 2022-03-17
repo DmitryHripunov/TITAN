@@ -1,26 +1,20 @@
 @import (reference) '../../less/variables.less';
 
 .footer {
-  padding-top: 3.2rem;
-  padding-bottom: 1.6rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   text-align: center;
 
-  //color: @color-text-reverse;
-  background-color: #f0f0f0;
+  background-color: @color-dark-h;
 
   @media screen and (min-width: @hamburger) {
-    padding-top: 4.8rem;
-    padding-bottom: 1.4rem;
-
-    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 24px;
   }
 
   &__top {
     padding-bottom: 1.6rem;
-
-    border-bottom: 0.1rem solid @color-separator-reverse;
-
     @media screen and (min-width: @hamburger) {
       display: flex;
 
@@ -40,38 +34,29 @@
 
   &__top-column_first,
   &__top-column_second {
-    box-sizing: border-box;
     padding-right: 1.6rem;
-
+    align-items: flex-start;
     flex-grow: 1;
+    grid-gap: 20px 0;
   }
 
   &__top-column_first {
     max-width: 481 / 936 * 100%;
     margin-right: 4rem;
-
-    border-right: 0.1rem solid @color-separator-reverse;
-
-    column-count: 2;
-    column-gap: 3.2rem;
+    text-align: left;
   }
 
   &__top-column_second {
     max-width: 456 / 936 * 100%;
+
+    @media screen and (min-width: @hamburger) {
+      display: inline-flex;
+      flex-direction: column;
+    }
   }
 
   &__links-wrapper {
     break-inside: avoid;
-  }
-
-  &__title {
-    display: block;
-
-    color: @color-brand;
-
-    font-size: 2rem;
-    font-weight: normal;
-    line-height: 1.25;
   }
 
   &__list {
@@ -104,6 +89,7 @@
 
   &__address {
     font-style: normal;
+    text-align: left;
   }
 
   &__address:not(:last-child) {
@@ -122,17 +108,15 @@
     margin-top: 1rem;
   }
 
-  &__phone {
-    font-size: 2rem;
-    transition: @transition;
-
-    &:hover {
-      color: @color-brand;
-    }
-  }
-
   &__socials {
     margin-bottom: 0.4rem;
+  }
+
+  &__socials_mobile {
+    margin-top: 30px;
+    @media screen and (min-width: @hamburger) {
+      display: none !important;
+    }
   }
 
   &__btn {
@@ -153,18 +137,24 @@
   }
 
   &__copyright {
-    margin-bottom: 1.6rem;
+    font-size: 12px;
+    color: #A8A4AC;
+    margin-top: 1.6rem;
 
     @media screen and (min-width: @hamburger) {
-      margin-bottom: 0;
+      margin-top: 0;
+      margin-right: 22rem;
     }
   }
 
   &__bottom-links {
     color: @color-gray;
+    display: flex;
+    flex-direction: column-reverse;
 
     @media screen and (min-width: @hamburger) {
-      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
   }
 
@@ -182,11 +172,90 @@
   }
 
   &__bottom-link:not(:last-child) {
-    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
 
     @media screen and (min-width: @hamburger) {
       margin-right: 2.4rem;
-      margin-bottom: 0;
+      margin-top: 0;
     }
+  }
+
+  &__icon-logo {
+    width: 160px;
+    height: 48px;
+  }
+
+  &__tel-link {
+    display: none;
+    @media screen and (min-width: @hamburger) {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: @color-brand;
+    } 
+  }
+
+  &__footnote {
+    display: none;
+    @media screen and (min-width: @hamburger) {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: @color-gray-m;
+      max-width: 200px;
+    }
+  }
+
+  &__mail-link {
+    display: none;
+
+    @media screen and (min-width: @hamburger) {
+      display: block;
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 12px;
+      color: #C5C2C8;
+    }
+  }
+
+  &__brand-link,
+  &__nav-link {
+    font-weight: 500;
+    display: inline-block;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: left;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__brand-link {
+    font-size: 18px;
+    color: @color-brand;
+  }
+
+  &__nav-link {
+    font-size: 14px;
+    color: @color-gray;
+  }
+
+  &__address-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: @color-gray;
+    margin-bottom: 10px;
+  }
+
+  &__address-text {
+    max-width: 170px;
+    font-size: 12px;
+    line-height: 140%;
+    color: @color-gray-m;
   }
 }
