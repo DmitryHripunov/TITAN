@@ -2,11 +2,8 @@
 
 .warehouse {
   color: @color-text-reverse;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   overflow: hidden;
-  position: relative;
+
 
   & .title:after {
     transition: width .4s ease-out;
@@ -16,12 +13,26 @@
     width: 100%;
   }
 
+  & h2 {
+    transition: color .3s ease-in-out;
+  }
 
   @media screen and (min-width: @desktop-small) {
     position: relative;
+    max-height: 360px;
 
-    padding-right: 0;
-    padding-left: 0;
+    &:hover &__bg {
+      transform: scale(1.06);
+    }
+    
+    &:hover &__text,
+    &:hover h2 {
+      color: @color-dark-h
+    }
+
+    &:hover &__container {
+      background-color: @color-page-bg;
+    }
   }
 
   &::before {
@@ -35,72 +46,75 @@
   }
 
   &__bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    display: block;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: transform .5s ease-out;
-    overflow: hidden;
-  }
+    width: 100%;
+    min-height: 200px;
 
-  &:hover &__bg {
-    transform: scale(1.06);
+    @media screen and (min-width: @desktop-small) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: transform .5s ease-out;
+  
+      &_reverse {
+        left: auto;
+        right: 0;
+      }
+    }
   }
 
   &__container {
     position: relative;
     display: flex;
     align-items: flex-start;
+    background-color: @color-dark-h;
+    transition: background-color .3s ease-in-out;
 
     @media screen and (min-width: @desktop-small) {
       position: absolute;
       top: 0;
       left: 0;
-
       box-sizing: border-box;
       width: 50%;
       height: 100%;
+      align-items: center;
+      justify-content: center;
       
+      &_reverse {
+        left: auto;
+        right: 0;
+      }
     }
-  }
-
-  &__container::before {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    content: '';
-
-    background-color: @color-bg-half-transparent;
   }
 
   &__content {
     position: relative;
-
-    padding: 1.6rem;
+    padding: 20px 16px;
 
     @media screen and (min-width: @desktop-small) {
-      padding: 6rem;
+      max-width: 490px;
     }
   }
-
-
 
   &__text {
     margin-top: 1.6rem;
     margin-bottom: 3.2rem;
-    line-height: 1.6;
+    line-height: 1.3;
+    font-weight: 500;
+    font-size: 16px;
+    color: @color-gray-m;
+    transition: color .3s ease-in-out;
 
     @media screen and (min-width: @desktop-small) {
-      line-height: 1.4;
+      font-size: 18px;
     }
   }
 
