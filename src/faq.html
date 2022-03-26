@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Прямые диваны</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+</head>
+
+<body class="body">
+  ${require('./common.blocks/header/header.html')}
+
+  <main class="page-wrapper__main">
+
+    <div class="breadcrumbs-wrapper">
+      <div class="container">
+        <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a class="breadcrumbs__link" href="/" itemprop="item">
+              <span itemprop="name">Главная страница</span>
+            </a>
+            <meta itemprop="position" content="0" />
+          </li>
+          <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope=""
+            itemtype="http://schema.org/ListItem">
+            <div class="breadcrumbs__link" itemprop="item">
+              <span itemprop="name">Вопрос-ответ</span>
+            </div>
+            <meta itemprop="position" content="1" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-frame page-frame_category">
+      <div class="container">
+
+        <h1 class="page-title">
+          <span>FAQ</span>
+        </h1>
+
+        <div class="faq">
+          <div class="faq__wrapper">
+            <h2 class="faq__name">общие вопросы</h2>
+
+            <ol class="faq__list">
+              <li class="faq__item">
+                <div class="faq__item-top">
+                  <div class="faq__title">
+                    Заголовок пункта
+                  </div>
+                </div>
+
+                <div class="faq__dropdown">
+                  <p>
+                    Обеспечивается за счёт качества исходного сырья. Для изготовления пружин мы выбираем лучшие
+                    материалы: стальную
+                    углеродистую проволоку (ГОСТу 9389), прочное износостойкое нетканое полотно «Спанбонд»
+                    и термоплавкий клей. Материалы
+                    предварительно проверяются на соответствие стандартам.
+                  </p>
+
+                  <ul>
+                    <li>Платформа — программно-аппаратные средства, интегрированные с Сайтом Администрации.</li>
+                    <li>Платформа — программно-аппаратные средства, интегрированные с Сайтом Администрации.</li>
+                    <li>Сайт Администрации / Сайт — интернет-сайты, размещенные в домене www и его поддоменах.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="faq__item">
+                <div class="faq__item-top">
+                  <div class="faq__title">
+                    Заголовок пункта
+                  </div>
+                </div>
+
+                <div class="faq__dropdown">
+                  <p>
+                    Обеспечивается за счёт качества исходного сырья. Для изготовления пружин мы выбираем лучшие
+                    материалы: стальную
+                  </p>
+                </div>
+              </li>
+
+              <li class="faq__item">
+                <div class="faq__item-top">
+                  <div class="faq__title">
+                    Заголовок пункта
+                  </div>
+                </div>
+
+                <div class="faq__dropdown">
+                  <p>
+                    Обеспечивается за счёт качества исходного сырья. Для изготовления пружин мы выбираем лучшие
+                    материалы: стальную
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <h2 class="faq__name">вопросы</h2>
+
+            <ol class="faq__list">
+              <li class="faq__item">
+                <div class="faq__item-top">
+                  <div class="faq__title">
+                    Заголовок пункта
+                  </div>
+                </div>
+
+                <div class="faq__dropdown">
+                  <p>
+                    Обеспечивается за счёт качества исходного сырья. Для изготовления пружин мы выбираем лучшие
+                    материалы: стальную
+                  </p>
+                </div>
+              </li>
+
+              <li class="faq__item">
+                <div class="faq__item-top">
+                  <div class="faq__title">
+                    Заголовок пункта
+                  </div>
+                </div>
+
+                <div class="faq__dropdown">
+                  <p>
+                    Обеспечивается за счёт качества исходного сырья. Для изготовления пружин мы выбираем лучшие
+                    материалы: стальную
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  ${require('./common.blocks/footer/footer.html')}
+
+  ${require('./common.blocks/popup/popup-partner.html')}
+
+  ${require('./common.blocks/popup/popup-ask.html')}
+
+  ${require('./common.blocks/popup/popup-order.html')}
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+@import (reference) "../../less/variables.less";
+
+.faq {
+  &__name {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (min-width: @desktop-small) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    padding-left: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item-top {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 48px;
+
+    @media (min-width: @desktop-small) {
+      font-size: 18px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 12px;
+      top: 24px;
+      background: #171618;
+      width: 20px;
+      height: 2px;
+      transition: transform .3s ease-in-out;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 21px;
+      top: 15px;
+      background: #171618;
+      height: 20px;
+      width: 2px;
+      transition: transform .3s ease-in-out;
+    }
+
+    @media (min-width: @desktop-small) {
+      &::before {
+        top: 30px;
+      }
+
+      &::after {
+        top: 21px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 16px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -16px;
+      width: calc(100% + 16px);
+      height: 100%;
+      z-index: -1;
+      border-bottom: 1px solid @color-gray;
+    }
+
+    &:first-child {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -16px;
+        width: calc(100% + 16px);
+        height: 100%;
+        border-top: 1px solid @color-gray;
+      }
+    }
+
+    @media (min-width: @desktop-small) {
+      padding: 20px 0;
+
+      &::before {
+        left: -20px;
+        width: calc(100% + 20px);
+      }
+
+      &:first-child {
+        &::before {
+          left: -20px;
+          width: calc(100% + 20px);
+        }
+      }
+    }
+
+    &.is-active {
+      &::before {
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .faq__title {
+        &::after,
+        &::before {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    padding-top: 10px;
+    max-width: 780px;
+    width: 100%;
+    display: none;
+    padding-right: 48px;
+
+    ul,
+    ol {
+      padding-left: 20px;
+    }
+
+    p:not(:last-child),
+    ul:not(:last-child),
+    ol:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

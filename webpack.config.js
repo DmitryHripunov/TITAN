@@ -241,10 +241,6 @@ module.exports = {
       filename: '404.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/warehouse.html',
-      filename: 'warehouse.html',
-    }),
-    new HtmlWebpackPlugin({
       template: 'src/data-processing.html',
       filename: 'data-processing.html',
     }),
@@ -265,52 +261,8 @@ module.exports = {
       filename: 'product-page.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/buyers.html',
-      filename: 'buyers.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/buyers-carcass.html',
-      filename: 'buyers-carcass.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/buyers-catalog.html',
-      filename: 'buyers-catalog.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/buyers-change-size.html',
-      filename: 'buyers-change-size.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/buyers-choice-fabric.html',
-      filename: 'buyers-choice-fabric.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/buyers-filling.html',
-      filename: 'buyers-filling.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/buyers-machinisms.html',
-      filename: 'buyers-machinisms.html',
-    }),
-    new HtmlWebpackPlugin({
       template: 'src/about.html',
       filename: 'about.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/article-catalog.html',
-      filename: 'article-catalog.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/article-page.html',
-      filename: 'article-page.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/where-buy.html',
-      filename: 'where-buy.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/where-buy-region.html',
-      filename: 'where-buy-region.html',
     }),
     new HtmlWebpackPlugin({
       template: 'src/contacts.html',
@@ -327,6 +279,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/warehouse-program.html',
       filename: 'warehouse-program.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/faq.html',
+      filename: 'faq.html',
     }),
     // для добавления отдельной html страницы нужно подключить новый HtmlWebpackPlugin
     /* new HtmlWebpackPlugin({

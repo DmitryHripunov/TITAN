@@ -7,120 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная страница</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <style>
-    .bg__wrapper {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-    }
-
-    .bg__img::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #000;
-      opacity: .3;
-      z-index: 2;
-      height: 100%;
-    }
-
-    .bg__img {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .bg__img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .bg__text-wrapper {
-      position: absolute;
-      width: 90%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 3;
-    }
-
-    .bg__link {
-      display: block;
-      margin: 56px auto;
-      width: 170px;
-      height: 70px;
-    }
-
-    .bg__svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .bg__svg {
-      fill: #fff;
-    }
-
-    .bg__info-title {
-      color: #ffffff;
-      line-height: 1.25;
-      font-size: 25px;
-      margin-bottom: 40px;
-    }
-
-    .bg__info-link-wrapper {
-      margin-bottom: 32px;
-    }
-
-    .bg__info-tel {
-      display: inline-block;
-      text-align: center;
-      font-size: 25px;
-      color: #ffffff;
-      margin-bottom: 8px;
-    }
-
-    .bg__info-text {
-      display: block;
-      text-align: center;
-      color: #ffffff;
-      font-size: 20px;
-    }
-
-    @media(min-width: 768px) {
-      .bg__info-title {
-        max-width: 780px;
-        font-size: 33px;
-        margin: 0 auto 80px auto;
-      }
-
-      .bg__link {
-        margin: 80px auto;
-        width: 260px;
-        height: 110px;
-      }
-
-
-      .bg__info-tel {
-        font-size: 33px;
-      }
-
-      .bg__info-text {
-        font-size: 25px;
-      }
-    }
-  </style>
 </head>
 
 <body class="body">
-  <div class="page-wrapper" id="vue-app">
     ${require('./common.blocks/header/header.html')}
+
     <main class="page-wrapper__main">
 
       <div class="breadcrumbs-wrapper">
@@ -291,9 +182,9 @@
         </div>
       </div>
     </main>
+    
     ${require('./common.blocks/footer/footer.html')}
 
-  </div>
 
   ${require('./common.blocks/popup/popup-partner.html')}
 
