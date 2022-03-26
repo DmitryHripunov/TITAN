@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сервис и гарантия</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+  ${require('./common.blocks/header/header.html')}
+
+  <main class="page-wrapper__main">
+    <div class="breadcrumbs-wrapper">
+      <div class="container">
+        <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a class="breadcrumbs__link" href="/" itemprop="item">
+              <span itemprop="name">Главная страница</span>
+            </a>
+            <meta itemprop="position" content="0" />
+          </li>
+          <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope=""
+            itemtype="http://schema.org/ListItem">
+            <div class="breadcrumbs__link" itemprop="item">
+              <span itemprop="name">Сервис и гарантия</span>
+            </div>
+            <meta itemprop="position" content="1" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-frame">
+      <div class="container">
+        <h1 class="page-title">
+          <span>Сервис и гарантия</span>
+        </h1>
+
+        <article class="about-page">
+          <div class="about-page__column">
+            <p>
+              Мы считаем, что доверие между партнёрами — важнейшая составляющая успешного бизнеса, и делаем
+              все для того,
+              чтобы и крупные производители, и мелкие фабрики остались довольны нашим качеством обслуживания и качеством
+              выпускаемых
+              нами изделий.
+            </p>
+            <p>
+              Помимо гарантий, мы предлагаем своим клиентам высокий уровень сервиса. Каждый наш клиент, независимо
+              от объёма партии
+              товара, получает личного менеджера, который помогает решить все вопросы по выбору продукции, оформлению
+              заявки
+              и его доставке к заказчику.
+            </p>
+          </div>
+
+          <div class="about-page__column">
+            <p>
+              При необходимости менеджер также договаривается с транспортной компанией, осуществляющей грузовые
+              перевозки. Таким
+              образом гарантируется своевременная доставка в любой пункт назначения.
+            </p>
+            <p>
+              Покупая у нас пружинные блоки, вы можете рассчитывать на наиболее выгодные условия сотрудничества,
+              на всестороннюю
+              поддержку и на мгновенную обратную связь.
+            </p>
+          </div>
+        </article>
+
+        ${require('./common.blocks/swiper-article/swiper-article.html')}
+      </div>
+    </div>
+  </main>
+
+  ${require('./common.blocks/footer/footer.html')}
+
+  ${require('./common.blocks/popup/popup-partner.html')}
+
+  ${require('./common.blocks/popup/popup-ask.html')}
+
+  ${require('./common.blocks/popup/popup-order.html')}
+</body>
+
+</html>

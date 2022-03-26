@@ -118,7 +118,7 @@ module.exports = {
           outputPath: 'img/',
         },
       },
-        'img-loader',
+      'img-loader',
       ],
 
     },
@@ -135,7 +135,7 @@ module.exports = {
           outputPath: 'img/',
         },
       },
-        'img-loader',
+      'img-loader',
       ],
 
     },
@@ -325,8 +325,8 @@ module.exports = {
       filename: 'ui.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/account.html',
-      filename: 'account.html',
+      template: 'src/service-and-warranty.html',
+      filename: 'service-and-warranty.html',
     }),
     new HtmlWebpackPlugin({
       template: 'src/warehouse-program.html',
@@ -343,17 +343,15 @@ module.exports = {
 };
 
 if (!isDevelopment) {
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false,
-      },
-    }));
-  module.exports.plugins.push(
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: "'production'",
-      },
-    }));
+  module.exports.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
+    compress: {
+      warnings: false,
+    },
+  }));
+  module.exports.plugins.push(new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: "'production'",
+    },
+  }));
 }
