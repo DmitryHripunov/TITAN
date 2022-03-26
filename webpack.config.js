@@ -245,20 +245,16 @@ module.exports = {
       filename: 'warehouse.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/collection-list.html',
-      filename: 'collection-list.html',
+      template: 'src/data-processing.html',
+      filename: 'data-processing.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/collection-item.html',
-      filename: 'collection-item.html',
+      template: 'src/agreement.html',
+      filename: 'agreement.html',
     }),
     new HtmlWebpackPlugin({
       template: 'src/category.html',
       filename: 'category.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/catalog-transformation.html',
-      filename: 'catalog-transformation.html',
     }),
     new HtmlWebpackPlugin({
       template: 'src/favorite.html',
