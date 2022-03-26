@@ -10,27 +10,21 @@
 </head>
 
 <body class="body">
-
-<div class="page-wrapper" id="vue-app">
-
-    ${require('./common.blocks/header/header-fixed.html')}
-
-    <div class="about-head" style="background-image: url('${require('./common.blocks/about/img/about-bg.jpg')}');">
-        <div class="about-head__caption">Компания «STOPМебель»</div>
-    </div>
+    ${require('./common.blocks/header/header.html')}
 
     <main class="page-wrapper__main">
-
         <div class="breadcrumbs-wrapper">
             <div class="container">
                 <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope=""
+                        itemtype="http://schema.org/ListItem">
                         <a class="breadcrumbs__link" href="/" itemprop="item">
                             <span itemprop="name">Главная страница</span>
                         </a>
                         <meta itemprop="position" content="0" />
                     </li>
-                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope=""
+                        itemtype="http://schema.org/ListItem">
                         <div class="breadcrumbs__link" itemprop="item">
                             <span itemprop="name">О компании</span>
                         </div>
@@ -41,74 +35,131 @@
         </div>
 
         <div class="page-frame">
-
             <div class="container">
+                <h1 class="page-title">
+                    <span>О компании</span>
+                </h1>
 
                 <article class="about-page">
-
                     <div class="about-page__column">
-                        <h1 class="page-title">
-                            <span>О компании</span>
-                        </h1>
-                        <h2 class="about-page__subtitle">Мы – фабрика дизайнерской мебели STOPМебель.</h2>
+                        <h2 class="about-page__subtitle">Пружинные блоки от производителя</h2>
+
                         <p>
-                            Наша мягкая мебель — это настоящее воплощение итальянского стиля. В производстве используем только экологически чистые материалы — массив дерева. Практически любой диван имеет раскладной механизм, кровати, как и диваны, могут быть оснащены ящиком для хранения белья.
+                            Добро пожаловать в SpringSever! Компания springsever — один из надёжных производителей
+                            пружинных блоков в России.
+                            Мы изготавливаем независимые пружинные блоки, которые обладают наиболее совершённой
+                            конструкцией и обеспечивают
+                            максимально комфортный отдых и сон. На сегодняшний день это лучшее основание для матрасов
+                            и диванов.
                         </p>
-                        <figure>
-                            <img src="${require('./common.blocks/about/img/about.png')}" alt="Производство Stopмебель" />
-                            <figcaption>Производство Stopмебель</figcaption>
-                        </figure>
-                        <p>
-                            В ассортименте ткани от Instroy & mebel-art, VIP-текстиль, Mebelliery. Также для продления срока службы диванов и кресел мы предлагаем съемные чехлы. Они износоустойчивы, надежны, просты в обслуживании.
-                        </p>
-                        <p>
-                            Материалы для обивки отбираются нашими дизайнерами из актуальных коллекций — предлагается более 7000 вариантов.
-                        </p>
-                        <h2 class="about-page__subtitle">Stopмебель — живите комфортно!</h2>
                     </div>
 
                     <div class="about-page__column">
-                        <h2 class="page-title">
-                            <span>Сертификаты</span>
-                        </h2>
-                        <div class="about-page__link">
-                            <a href="${require('./common.blocks/about/img/about.png')}" download>Сертификат соответствия</a>
-                        </div>
-                        <div class="about-page__link">
-                            <a href="${require('./common.blocks/about/img/about.png')}" download>Декларация о соответствии</a>
-                        </div>
-                    </div>
+                        <h2 class="about-page__subtitle about-page__subtitle_hidden">Пружинные блоки</h2>
 
+                        <p>
+                            Наша мягкая мебель — это настоящее воплощение итальянского стиля. В производстве используем
+                            только экологически
+                            чистые материалы — массив дерева. Практически любой диван имеет раскладной механизм,
+                            кровати, как и диваны,
+                            могут быть оснащены ящиком для хранения белья.
+                        </p>
+                    </div>
                 </article>
 
-                <section class="section">
+                ${require('./common.blocks/swiper-article/swiper-article.html')}
 
-                    <h2 class="page-title page-title_secondary">
-                        <span>Наши дипломы</span>
-                    </h2>
+                <article class="about-page">
+                    <div class="about-page__column">
+                        <h2 class="about-page__subtitle">Высокое качество продукции</h2>
 
-                    ${require('./common.blocks/swiper-diplom/swiper-diplom.html')}
+                        <p>
+                            Обеспечивается за счёт качества исходного сырья. Для изготовления пружин мы выбираем лучшие
+                            материалы: стальную
+                            углеродистую проволоку (ГОСТу 9389), прочное износостойкое нетканое полотно «Спанбонд»
+                            и термоплавкий клей. Материалы
+                            предварительно проверяются на соответствие стандартам.
+                        </p>
+                    </div>
 
-                </section>
+                    <div class="about-page__column">
+                        <h2 class="about-page__subtitle">Все модификации независимых пружинных блоков</h2>
 
+                        <p>
+                            Наше производство располагает современным высокотехнологичным оборудованием. Это позволяет
+                            нам выпускать все типы
+                            пружинных блоков, в том числе усиленные, с различными зонами жёсткости, с максимальной
+                            нагрузкой до 150 кг.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="about-page">
+                    <div class="about-page__column">
+                        <h2 class="about-page__subtitle">Пружинные блоки любых форм и размеров</h2>
+
+                        <p>
+                            Широкий ассортимент нашей продукции позволит вам использовать независимые пружинные блоки
+                            под матрасы и диваны любого
+                            размера, а также наделить спальные и сидячие места всеми необходимыми качествами:
+                            упругостью, соответствующей жёсткостью
+                            и ортопедическими свойствами.
+                            Наши технологи следят за ассортиментом и не устают работать над проблемой его расширения.
+                        </p>
+                    </div>
+
+                    <div class="about-page__column">
+                        <h2 class="about-page__subtitle">Европейский стандарт качества и экологичность</h2>
+
+                        <p>
+                            Отклонения в производстве строго регламентируются ТУ. Качество наших изделий мы подтверждаем
+                            сертификатами и
+                            долгосрочной гарантией.
+                            Надежная упаковка.
+                            Поставка пружинных блоков осуществляется в упаковке, не подверженной воздействию влаги и
+                            защищающей изделия от
+                            загрязнений. Порча товара при транспортировке и хранении абсолютно исключена.
+
+                        </p>
+                    </div>
+                </article>
+
+                <article class="about-page">
+                    <div class="about-page__column">
+                        <h2 class="about-page__subtitle">Экспертный контроль качества продукции</h2>
+
+                        <p>
+                            Полная автоматизация, а также постоянный контроль за качеством изделий и работой
+                            оборудования на всех этапах
+                            производства практически исключает брак.
+                            Это позволяет минимизировать затраты на производство продукции и тем самым снизить
+                            стоимость.
+                        </p>
+                    </div>
+
+                    <div class="about-page__column">
+                        <h2 class="about-page__subtitle">Сильная команда</h2>
+
+                        <p>
+                            В нашей команде опытные менеджеры. Они помогут вам определиться с комплектацией и объемом
+                            заказа, рассчитают график
+                            поставок, определят индивидуальные условия сотрудничества для конкретного предприятия.
+                        </p>
+                    </div>
+                </article>
             </div>
-
         </div>
 
         ${require('./common.blocks/section-services/section-services.html')}
-
     </main>
 
     ${require('./common.blocks/footer/footer.html')}
 
-</div>
+    ${require('./common.blocks/popup/popup-partner.html')}
 
-${require('./common.blocks/popup/popup-partner.html')}
+    ${require('./common.blocks/popup/popup-ask.html')}
 
-${require('./common.blocks/popup/popup-ask.html')}
-
-${require('./common.blocks/popup/popup-order.html')}
-
+    ${require('./common.blocks/popup/popup-order.html')}
 </body>
 
 </html>

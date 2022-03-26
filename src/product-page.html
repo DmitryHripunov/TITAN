@@ -12,265 +12,193 @@
 
 <body class="body">
 
-<div class="page-wrapper" id="vue-app">
+${require('./common.blocks/header/header.html')}
 
-    ${require('./common.blocks/header/header.html')}
+<main class="page-wrapper__main">
 
-    <main class="page-wrapper__main">
+    <div class="breadcrumbs-wrapper">
+        <div class="container">
+            <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a class="breadcrumbs__link" href="/" itemprop="item">
+                        <span itemprop="name">Главная страница</span>
+                    </a>
+                    <meta itemprop="position" content="0" />
+                </li>
+                <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a href="category.html" class="breadcrumbs__link" itemprop="item">
+                        <span itemprop="name">Bonnell</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <div class="breadcrumbs__link" itemprop="item">
+                        <span itemprop="name">Pocket Standart Hard</span>
+                    </div>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ul>
+        </div>
+    </div>
 
-        <div class="breadcrumbs-wrapper">
+    <div class="page-frame page-frame_white">
+        <section class="product-summary">
             <div class="container">
-                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a class="breadcrumbs__link" href="/" itemprop="item">
-                            <span itemprop="name">Главная страница</span>
-                        </a>
-                        <meta itemprop="position" content="0" />
-                    </li>
-                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a href="category.html" class="breadcrumbs__link" itemprop="item">
-                            <span itemprop="name">Прямые диваны</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </li>
-                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <div class="breadcrumbs__link" itemprop="item">
-                            <span itemprop="name">Агат</span>
+                <div class="product-summary__inner">
+                    <div class="product-summary__left">
+                        <div class="product-summary__gallery">
+                            ${require('./common.blocks/preview-gallery/preview-gallery.html')}
                         </div>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                </ul>
+                    </div>
+                    <div class="product-summary__right">
+                        <div class="product-card product-card_inner">
+                            <div class="product-card__text">
+                                <span class="product-card__title">POCKET SPRING STANDART</span>
+                        
+                                <div class="product-card__description">
+                                    Имеет 290 пружин на м². Нестандартное расположение пружин, в виде пчелиных сот позволяет увеличить
+                                    количество пружин на
+                                    м². Матрасы на основе таких блоков способны выдерживать большие нагрузки.
+                                </div>
+                        
+                                <div class="product-card__table">
+                                    <div class="product-card__row">
+                                        <div class="product-card__cell">
+                                            <div class="product-card__table-title">высота блока</div>
+                                            <div class="product-card__table-icon"
+                                                style="background-image: url(${require('./common.blocks/product-card/img/product_prop_1.png')})">
+                                            </div>
+                                            <div class="product-card__table-props">
+                                                <span>8 — 16 см</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="product-card__cell">
+                                            <div class="product-card__table-title">диаметр проволоки</div>
+                                            <div class="product-card__table-icon"
+                                                style="background-image: url(${require('./common.blocks/product-card/img/product_prop_2.png')})">
+                                            </div>
+                                            <div class="product-card__table-props">
+                                                <span>1,8 мм</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <div class="product-card__cell">
+                                            <div class="product-card__table-title">форма пружины</div>
+                                            <div class="product-card__table-icon"
+                                                style="background-image: url(${require('./common.blocks/product-card/img/product_prop_3.png')})">
+                                            </div>
+                                            <div class="product-card__table-props">бочко–образная</div>
+                                        </div>
+                        
+                                        <div class="product-card__cell">
+                                            <div class="product-card__table-title">диаметр пружины</div>
+                                            <div class="product-card__table-icon"
+                                                style="background-image: url(${require('./common.blocks/product-card/img/product_prop_4.png')})">
+                                            </div>
+                                            <div class="product-card__table-props">
+                                                <span>Ø 54 мм</span>
+                                                <span>Ø 62 мм</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <div class="product-card__cell">
+                                            <div class="product-card__table-title">кол-во витков</div>
+                                            <div class="product-card__table-icon"
+                                                style="background-image: url(${require('./common.blocks/product-card/img/product_prop_5.png')})">
+                                            </div>
+                                            <div class="product-card__table-props">
+                                                <span>6 — 6,5 см</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="product-card__cell">
+                                            <div class="product-card__table-title">плотность пружин</div>
+                                            <div class="product-card__table-icon"
+                                                style="background-image: url(${require('./common.blocks/product-card/img/product_prop_6.png')})">
+                                            </div>
+                                            <div class="product-card__table-props">
+                                                <span>290 п./м²</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-card__props-wrapper">
+                                    <div class="product-card__props">
+                                        <div class="product-card__props-title">Материалы</div>
+                            
+                                        <div class="product-card__props-item">Проволока — 1,8 мм</div>
+                                        <div class="product-card__props-item">Спанбонд — 70 г / м²</div>
+                                        <div class="product-card__props-item">Спанбонд упаковочный — 60 г / м²</div>
+                                    </div>
+                            
+                                    <div class="product-card__props">
+                                        <div class="product-card__props-title">Размеры</div>
+                            
+                                        <div class="product-card__props-desc">
+                                            Размерный ряд основывается на пожеланиях наших клиентов и ограничивается лишь следующими значениями:
+                                        </div>
+                            
+                                        <div class="product-card__props-item">Высота — от 80 мм до 160 мм</div>
+                                        <div class="product-card__props-item">Максимальная ширина — 2 м</div>
+                                        <div class="product-card__props-item">Длина — 10 м</div>
+                            
+                                        <div class="product-card__props-desc">
+                                            Для каждого клиента индивидуальный размер.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="questions">
+        <div class="container questions__container">
+            <h2 class="title title_second title_second_big section__title section__title_underline questions__title">
+                Остались вопросы?
+            </h2>
+    
+            <div class="questions__phones-wrapper">
+                <div class="questions__phones-item">
+                    <span class="questions__text">Обращайтесь к нам по телефонам:</span>
+                    <a class="questions__phone" href="tel:88005507890">8 800 550 78 90</a>
+                    <div class="questions__phone-caption">* Для Ивановской области — звонок бесплатный.</div>
+                </div>
+    
+                <div class="questions__phones-item">
+                    <span class="questions__text">Обращайтесь к нам по телефонам:</span>
+                    <a class="questions__phone" href="mailto:titan-prugina@mail.ru">titan-prugina@mail.ru</a>
+                    <div class="questions__phone-caption questions__phone-caption_hidden"> 1 </div>
+                </div>
+            </div>
+    
+            <div class="questions__link-group">
+                <a class="questions__link" href="#">
+                    <svg class="icon questions__icon">
+                        <use xlink:href="#icon-marker"></use>
+                    </svg>
+                    Контакты
+                </a>
+                <div class="questions__link js-open-popup" data-target-popup="popup-ask">
+                    <svg class="icon questions__icon">
+                        <use xlink:href="#icon-question"></use>
+                    </svg>
+                    задать вопрос
+                </div>
+    
             </div>
         </div>
+    </section>
+</main>
 
-        <div class="page-frame page-frame_white">
-
-            <section class="product-summary">
-                <div class="container">
-                    <div class="product-summary__inner">
-                        <div class="product-summary__left">
-                            <div class="product-summary__gallery">
-                                ${require('./common.blocks/preview-gallery/preview-gallery.html')}
-                            </div>
-                            <div class="product-summary__equipment">
-                                <div class="equipment">
-                                    <div class="equipment__title">Комплектация креслом Бентли</div>
-                                    <div class="equipment__content">
-                                        <a href="product-page.html" class="equipment__product" style="background-image: url(${require('./common.blocks/product-card/img/product-preview-06.jpg')})">
-
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-summary__right">
-                            <div class="product-summary__title">Агат</div>
-                            <div class="product-summary__id">Артикул: F23456</div>
-                            <div class="product-summary__call">
-                                <div class="call-box">
-                                    <span>Есть вопросы? Звоните!</span><span>8 (800) 222 23 58</span>
-                                </div>
-                            </div>
-                            <div class="product-summary__char">
-                                <div class="characteristics">
-                                    <div class="characteristics__col">
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Габариты, мм:</div>
-                                            <div class="characteristics__value">2700 х 1550</div>
-                                        </div>
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Каркас:</div>
-                                            <div class="characteristics__value">металлический</div>
-                                        </div>
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Механизм трансформации:</div>
-                                            <a href="https://www.youtube.com/watch?v=4TaA2SvyT1o" class="characteristics__link glightbox-video">
-                                                полновыкатная еврософа
-                                            </a>
-                                        </div>
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Настил сиденья:</div>
-                                            <div class="characteristics__value">
-                                                <span class="characteristics__link js-open-popup" data-target-popup="popup-material">термовойлок</span>,
-                                                <span class="characteristics__link js-open-popup" data-target-popup="popup-material">эластичный ППУ марки ST</span>,
-                                                <span class="characteristics__link js-open-popup" data-target-popup="popup-material">Hollcon</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="characteristics__col">
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Наполнитель подушек:</div>
-                                            <div class="characteristics__value">контурная резка высокоэластичного ППУ, <span class="characteristics__link js-open-popup" data-target-popup="popup-brands">съемные чехлы</span></div>
-                                        </div>
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Варианты декора:</div>
-                                            <div class="characteristics__decor">
-                                                <div class="decor-list">
-                                                    <div class="decor-list__item">
-                                                        <div class="decor-list__texture" style="background-image: url(${require('./common.blocks/product-summary/img/decor-01.png')})"></div>
-                                                    </div>
-                                                    <div class="decor-list__item">
-                                                        <div class="decor-list__texture" style="background-image: url(${require('./common.blocks/product-summary/img/decor-02.png')})"></div>
-                                                    </div>
-                                                    <div class="decor-list__item">
-                                                        <div class="decor-list__texture" style="background-image: url(${require('./common.blocks/product-summary/img/decor-03.png')})"></div>
-                                                    </div>
-                                                    <div class="decor-list__item">
-                                                        <div class="decor-list__texture" style="background-image: url(${require('./common.blocks/product-summary/img/decor-04.png')})"></div>
-                                                    </div>
-                                                    <div class="decor-list__item">
-                                                        <div class="decor-list__texture" style="background-image: url(${require('./common.blocks/product-summary/img/decor-05.png')})"></div>
-                                                    </div>
-                                                    <div class="decor-list__item">
-                                                        <div class="decor-list__texture" style="background-image: url(${require('./common.blocks/product-summary/img/decor-06.png')})"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="characteristics__item">
-                                            <div class="characteristics__title">Комплектация:</div>
-                                            <div class="characteristics__value">раскладное кресло</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-summary__button-group">
-                                <!--
-                                <div class="product-summary__button">
-                                    <div class="btn js-open-popup" data-target-popup="popup-order">Заказать</div>
-                                </div>
-                                -->
-
-                                <!--
-                                <div class="product-summary__button">
-                                    <a
-                                            href="${require('./common.blocks/preview-gallery/img/scheme-1.png')}"
-                                            class="btn glightbox"
-                                            data-target-popup="popup-order"
-                                            data-gallery="gallery-scheme"
-                                    >
-                                        Схема раскладки
-                                    </a>
-                                </div>
-                                -->
-                                <div class="product-summary__scheme">
-                                    <div class="scheme">
-                                        <div class="scheme__title">Схема раскладки:</div>
-                                        <div class="scheme__list">
-                                            <div class="scheme__item">
-                                                <a
-                                                        href="${require('./common.blocks/preview-gallery/img/scheme-1.png')}"
-                                                        class="scheme__img glightbox"
-                                                        data-gallery="gallery-scheme"
-                                                        style="background-image: url(${require('./common.blocks/preview-gallery/img/scheme-1-preview.png')})"
-                                                ></a>
-                                            </div>
-                                            <div class="scheme__item">
-                                                <a
-                                                        href="${require('./common.blocks/preview-gallery/img/scheme-2.png')}"
-                                                        class="scheme__img glightbox"
-                                                        data-gallery="gallery-scheme"
-                                                        style="background-image: url(${require('./common.blocks/preview-gallery/img/scheme-2-preview.png')})"
-                                                ></a>
-                                            </div>
-                                            <div class="scheme__item">
-                                                <a
-                                                        href="${require('./common.blocks/preview-gallery/img/scheme-2.png')}"
-                                                        class="scheme__img glightbox"
-                                                        data-gallery="gallery-scheme"
-                                                        style="background-image: url(${require('./common.blocks/preview-gallery/img/scheme-2-preview.png')})"
-                                                ></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Качественная мебель от производителя</h2>
-                <p class="common-box__text">
-                    Потребности современных людей ежегодно становятся всё больше и теперь человеку недостаточно иметь просто комфортный диван или удобную кровать: хочется, чтобы изделия были уникальными и добавляли оригинальности домашнему пространству. Сделать интерьер просто неповторимым поможет дизайнерская мебель от Vosart. Онлайн-фабрика производит высококачественные модельные кровати и диваны по итальянскому дизайну и предлагает её на рынке России по довольно доступным ценам.
-                </p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Советуем посмотреть</h2>
-                <div class="swiper-products">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="swiper-slide">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <svg><use xlink:href="#arrow-left-bold"></use></svg>
-                    </div>
-                    <div class="swiper-button-next">
-                        <svg><use xlink:href="#arrow-right-bold"></use></svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="product-description">
-            <div class="container">
-                <div class="product-description__inner">
-                    <div class="product-description__item">
-                        <div class="product-description__title">Уход</div>
-                        <div class="product-description__text">
-                            Все диваны VOSART имеют съемные чехлы, их с легкостью можно сдавать в химчистку. Также, Вы можете заказать различные виды обивки и самостоятельно их менять в зависимости от настроения или времени года.
-                        </div>
-                        <div class="product-description__img" style="background-image: url(${require('./common.blocks/product-description/img/product-description-01.jpg')})"></div>
-                    </div>
-                    <div class="product-description__item">
-                        <div class="product-description__title">Основные материалы</div>
-                        <div class="product-description__text">
-                            Основание и корпус мебели VOSART состоит из массива натурального дерева, благодаря чему все модели экологичны и долговечны. Основной наполнитель — пенополиуретан (ППУ). Высокотехнологичный материал, экологически чистый и гипоаллергенный, ППУ безвреден для здоровья и достаточно эргономичен.
-                        </div>
-                        <div class="product-description__img" style="background-image: url(${require('./common.blocks/product-description/img/product-description-02.jpg')})"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        ${require('./common.blocks/ask-block/ask-block.html')}
-
-        ${require('./common.blocks/popup/popup-material.html')}
-        ${require('./common.blocks/popup/popup-brands.html')}
-
-    </main>
-
-    ${require('./common.blocks/footer/footer.html')}
-
-</div>
+${require('./common.blocks/footer/footer.html')}
 
 ${require('./common.blocks/popup/popup-partner.html')}
 

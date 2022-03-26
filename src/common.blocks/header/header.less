@@ -77,11 +77,13 @@
     @media screen and (min-width: @hamburger) {
       width: 190px;
       height: 56px;
+      fill: @color-brand;
     }
   }
 
   &__mobile-menu {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     overflow: auto;
@@ -251,16 +253,11 @@
       top: ~'calc(100% + 2.6rem)';
       left: 0;
       visibility: hidden;
-
       width: max-content;
       padding-top: 2rem;
       padding-bottom: 1.2rem;
-
-      // transition: @transition-time;
       opacity: 0;
-      //color: @color-text;
       color: #fff;
-      //background-color: @color-text-reverse;
       background-color: rgba(0, 0, 0, 0.8);
 
       font-size: 1.3rem;
@@ -295,7 +292,6 @@
   &__nav-item:hover &__dropdown {
     @media screen and (min-width: @hamburger) {
       visibility: visible;
-      // transition-delay: 0s;
       opacity: 1;
       transition: .4s opacity ease-out;
     }
@@ -401,7 +397,7 @@
 
     @media screen and (min-width: @hamburger) {
       color: inherit;
-      align-items: flex-start;
+      align-items: center;
     }
   }
 
@@ -466,5 +462,85 @@
 
   &.is-moved &__phone-link:not(:last-child){
     margin-bottom: 0;
+  }
+
+  &__langs {
+    margin-right: 16px;
+    padding: 8px 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px 0;
+    font-weight: 600;
+    font-size: 18px;
+    min-width: 36px;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background-color: transparent;
+      transition: background-color .2s ease-in-out;
+    }
+    
+    &:hover {
+      &::after {
+        background-color: @color-dark-h;
+      }
+
+      .header__dropdown-langs {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: unset;
+      }
+    }
+
+    @media screen and (min-width: @hamburger) {
+      margin-right: 0;
+    }
+  }
+
+  &__langs_bg-transparent {
+    @media screen and (min-width: @hamburger) {
+      &:hover {
+        &::after {
+          background-color: @color-page-bg;
+        }
+      }
+  
+      .header__dropdown-langs {
+        background-color: @color-page-bg;
+      }
+    }
+  }
+
+  &__dropdown-langs {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 8px 5px;
+    min-width: 36px;
+    background-color: @color-dark-h;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+  }
+
+  &__lang,
+  &__lang-item {
+    cursor: pointer;
+
+    &:hover {
+      color: @color-brand;
+    }
+    transition: color .2s ease-in-out;
   }
 }

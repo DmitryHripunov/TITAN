@@ -11,138 +11,124 @@
 </head>
 
 <body class="body">
-    <div class="page-wrapper" id="vue-app">
+    ${require('./common.blocks/header/header-fixed.html')}
 
-        ${require('./common.blocks/header/header-fixed.html')}
+    <main class="page-wrapper__main">
+        <h1 class="visually-hidden">
+            Пружинные блоки от производителя, компании SpringSever — это гарантия качества и выгодное партнерство.
+        </h1>
+        <div class="main-slider">
+            <div class="swiper-container main-slider__container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main-slider__slide">
+                        <picture class="main-slider__slide-bg">
+                            <source srcset="${require('./common.blocks/main-slider/img/main-slider__slide.jpg')}"
+                                media="(min-width: 768px)">
+                            <img class="image"
+                                src="${require('./common.blocks/main-slider/img/main-slider__slide.jpg')}"
+                                alt="Название баннера">
+                        </picture>
 
-        <main class="page-wrapper__main">
-            <h1 class="visually-hidden">
-                Пружинные блоки от производителя, компании SpringSever — это гарантия качества и выгодное партнерство.
-            </h1>
-            <div class="main-slider">
-                <div class="swiper-container main-slider__container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide main-slider__slide">
-                            <picture class="main-slider__slide-bg">
-                                <source srcset="${require('./common.blocks/main-slider/img/main-slider__slide.jpg')}"
-                                    media="(min-width: 768px)">
-                                <img class="image"
-                                    src="${require('./common.blocks/main-slider/img/main-slider__slide.jpg')}"
-                                    alt="Название баннера">
-                            </picture>
+                        <div class="container main-slider__slide-inner">
+                            <span class="main-slider__text main-slider__text_big">
+                                Пружинные блоки
+                                для матрасов и диванов
+                            </span>
+                            <span class="main-slider__text main-slider__text_small">
+                                Пружинные блоки от производителя, компании SpringSever — это гарантия качества и
+                                выгодное партнерство.
+                            </span>
 
-                            <div class="container main-slider__slide-inner">
-                                <span class="main-slider__text main-slider__text_big">
-                                    Пружинные блоки
-                                    для матрасов и диванов
-                                </span>
-                                <span class="main-slider__text main-slider__text_small">
-                                    Пружинные блоки от производителя, компании SpringSever — это гарантия качества и
-                                    выгодное партнерство.
-                                </span>
-
-                                <div class="main-slider__btn">
-                                    <a class="btn" href="#">
-                                        Подробная информация
-                                    </a>
-                                </div>
+                            <div class="main-slider__btn">
+                                <a class="btn" href="#">
+                                    Подробная информация
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <ul class="socials socials_vertical main-slider__socials">
-                    <li class="socials__item">
-                        <a class="socials__link socials__link_dark socials__link_big" href="#">
-                            <svg class="socials__icon">
-                                <use xlink:href="#icon-od"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
             </div>
+        </div>
 
-            <section class="warehouse">
-                <div class="warehouse__bg  warehouse__bg_reverse"
-                    style="background-image: url('${require('./common.blocks/warehouse/img/banner.jpg')}')"></div>
-                <div class="warehouse__container">
-                    <div class="warehouse__content">
-                        <a href="#">
-                            <h2 class="title title_third section__title section__title_underline">
-                                Независимый пружинный блок
-                            </h2>
-                            <p class="warehouse__text">
-                                POCKET SPRING HARD имеет 290 пружин на м². Нестандартное расположение пружин, в виде
-                                пчелиных сот позволяет увеличить
-                                количество пружин на м².
-                            </p>
-                        </a>
+        <section class="warehouse">
+            <div class="warehouse__bg  warehouse__bg_reverse"
+                style="background-image: url('${require('./common.blocks/warehouse/img/banner.jpg')}')"></div>
+            <div class="warehouse__container">
+                <div class="warehouse__content">
+                    <a href="category.html">
+                        <h2 class="title title_third section__title section__title_underline">
+                            Независимый пружинный блок
+                        </h2>
+                        <p class="warehouse__text">
+                            POCKET SPRING HARD имеет 290 пружин на м². Нестандартное расположение пружин, в виде
+                            пчелиных сот позволяет увеличить
+                            количество пружин на м².
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="warehouse">
+            <div class="warehouse__bg"
+                style="background-image: url('${require('./common.blocks/warehouse/img/banner.jpg')}')"></div>
+            <div class="warehouse__container warehouse__container_reverse">
+                <div class="warehouse__content">
+                    <a href="category.html">
+                        <h2 class="title title_third section__title section__title_underline">
+                            Bonnell
+                        </h2>
+                        <p class="warehouse__text">
+                            POCKET SPRING HARD имеет 290 пружин на м². Нестандартное расположение пружин, в виде
+                            пчелиных сот позволяет увеличить
+                            количество пружин на м².
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions">
+            <div class="container questions__container">
+                <h2
+                    class="title title_second title_second_big section__title section__title_underline questions__title">
+                    Остались вопросы?
+                </h2>
+                
+                <div class="questions__phones-wrapper">
+                    <div class="questions__phones-item">
+                        <span class="questions__text">Обращайтесь к нам по телефонам:</span>
+                        <a class="questions__phone" href="tel:88005507890">8 800 550 78 90</a>
+                        <div class="questions__phone-caption">* Для Ивановской области — звонок бесплатный.</div>
+                    </div>
+
+                    <div class="questions__phones-item">
+                        <span class="questions__text">Обращайтесь к нам по телефонам:</span>
+                        <a class="questions__phone" href="mailto:titan-prugina@mail.ru">titan-prugina@mail.ru</a>
+                        <div class="questions__phone-caption questions__phone-caption_hidden"> 1 </div>
                     </div>
                 </div>
-            </section>
 
-            <section class="warehouse">
-                <div class="warehouse__bg"
-                    style="background-image: url('${require('./common.blocks/warehouse/img/banner.jpg')}')"></div>
-                <div class="warehouse__container warehouse__container_reverse">
-                    <div class="warehouse__content">
-                        <a href="#">
-                            <h2 class="title title_third section__title section__title_underline">
-                                Bonnell
-                            </h2>
-                            <p class="warehouse__text">
-                                POCKET SPRING HARD имеет 290 пружин на м². Нестандартное расположение пружин, в виде
-                                пчелиных сот позволяет увеличить
-                                количество пружин на м².
-                            </p>
-                        </a>
+                <div class="questions__link-group">
+                    <a class="questions__link" href="#">
+                        <svg class="icon questions__icon">
+                            <use xlink:href="#icon-marker"></use>
+                        </svg>
+                        Контакты
+                    </a>
+                    <div class="questions__link js-open-popup" data-target-popup="popup-ask">
+                        <svg class="icon questions__icon">
+                            <use xlink:href="#icon-question"></use>
+                        </svg>
+                        задать вопрос
                     </div>
+
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section class="questions">
-                <div class="container questions__container">
-                    <h2
-                        class="title title_second title_second_big section__title section__title_underline questions__title">
-                        Остались вопросы?
-                    </h2>
-                    
-                    <div class="questions__phones-wrapper">
-                        <div class="questions__phones-item">
-                            <span class="questions__text">Обращайтесь к нам по телефонам:</span>
-                            <a class="questions__phone" href="tel:88005507890">8 800 550 78 90</a>
-                            <div class="questions__phone-caption">* Для Ивановской области — звонок бесплатный.</div>
-                        </div>
-
-                        <div class="questions__phones-item">
-                            <span class="questions__text">Обращайтесь к нам по телефонам:</span>
-                            <a class="questions__phone" href="mailto:titan-prugina@mail.ru">titan-prugina@mail.ru</a>
-                            <div class="questions__phone-caption questions__phone-caption_hidden"> 1 </div>
-                        </div>
-                    </div>
-
-                    <div class="questions__link-group">
-                        <a class="questions__link" href="#">
-                            <svg class="icon questions__icon">
-                                <use xlink:href="#icon-marker"></use>
-                            </svg>
-                            Контакты
-                        </a>
-                        <div class="questions__link js-open-popup" data-target-popup="popup-ask">
-                            <svg class="icon questions__icon">
-                                <use xlink:href="#icon-question"></use>
-                            </svg>
-                            задать вопрос
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        ${require('./common.blocks/footer/footer.html')}
-    </div>
-
+    ${require('./common.blocks/footer/footer.html')}
 
     ${require('./common.blocks/popup/popup-partner.html')}
 

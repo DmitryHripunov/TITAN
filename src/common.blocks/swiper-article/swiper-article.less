@@ -1,7 +1,11 @@
 @import (reference) '../../less/variables.less';
 
-.swiper-diplom {
+.swiper-article {
     position: relative;
+
+    @media (min-width: @desktop) {
+        margin: 40px 0;
+    }
 
     & > .swiper-button-prev,
     & > .swiper-button-next {
@@ -34,27 +38,17 @@
         position: unset;
 
         @media (min-width: @desktop) {
-            margin-top: 40px;
+            display: none;
         }
     }
 
     & .swiper-pagination .swiper-pagination-bullet {
-        width: 4px;
-        height: 4px;
+        width: 8px;
+        height: 8px;
         margin: 0;
         opacity: 1 !important;
         background-color: #e0e0e0;
-
-        @media (min-width: @desktop) {
-            width: 8px;
-            height: 8px;
-        }
     }
-
-    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-
-    }
-
     & .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
         margin-right: 12px;
     }
@@ -68,8 +62,11 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        --aspect-ratio: 210/297;
+        --aspect-ratio: 376/190;
         cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
 
         &:after {
             content: '';

@@ -4,58 +4,113 @@
             <use xlink:href="#heart-filled"></use>
         </svg>
     </div>
-    <div class="product-card__gallery">
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <!--Высота изображений 200px-->
-                    <a href="product-page.html" class="product-card__img"
-                        style="background-image: url(${require('./img/product-preview-06.jpg')})"></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="product-page.html" class="product-card__img"
-                        style="background-image: url(${require('./img/product-preview-07.png')})"></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="product-page.html" class="product-card__img"
-                        style="background-image: url(${require('./img/product-preview-08.jpg')})"></a>
-                </div>
-                <!--
-                <div class="swiper-slide">
-                    <a href="product-page.html" class="product-card__img">
-                        <img src="${require('./img/product-preview-08.jpg')}" alt="Агат аврора">
-                    </a>
-                </div>
-                -->
-            </div>
 
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="product-card__icons">
-            <span
-                    class="product-card__icon tooltip"
-                    style="background-image: url(${require('./img/spring.svg')});"
-                    data-tippy-content="Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты.">
-            </span>
-            <span
-                    class="product-card__icon tooltip"
-                    style="background-image: url(${require('./img/vacuum-cleaner.svg')});"
-                    data-tippy-content="Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты.">
-            </span>
+    <div class="product-card__novelty">Новинка</div>
+
+    <div class="product-card__gallery">
+        <div class="swiper-slide">
+            <!--Высота изображений 200px-->
+            <a href="product-page.html" class="product-card__img"
+                style="background-image: url(${require('./img/product-preview.png')})"></a>
         </div>
     </div>
+
     <div class="product-card__text">
-        <div class="product-card__novelty">Новинка</div>
-        <a href="product-page.html" class="product-card__title">Агат аврора</a>
-        <a href="category.html" class="product-card__category">Прямые диваны</a>
+        <a href="product-page.html" class="product-card__title">POCKET SPRING STANDART</a>
+
         <div class="product-card__description">
-            Мебель данной коллекции может быть произведена по Вашим размерам, в доступных комплектациях и в различных
-            вариантах обивки.
+            Имеет 290 пружин на м². Нестандартное расположение пружин, в виде пчелиных сот позволяет увеличить
+            количество пружин на
+            м². Матрасы на основе таких блоков способны выдерживать большие нагрузки.
         </div>
-        <div class="product-card__price">
-            26 700 ₽
+
+        <div class="product-card__table">
+            <div class="product-card__row">
+                <div class="product-card__cell">
+                    <div class="product-card__table-title">высота блока</div>
+                    <div class="product-card__table-icon"
+                        style="background-image: url(${require('./img/product_prop_1.png')})">
+                    </div>
+                    <div class="product-card__table-props">
+                        <span>8 — 16 см</span> 
+                    </div>
+                </div>
+
+                <div class="product-card__cell">
+                    <div class="product-card__table-title">диаметр проволоки</div>
+                    <div class="product-card__table-icon"
+                        style="background-image: url(${require('./img/product_prop_2.png')})">
+                    </div>
+                    <div class="product-card__table-props">
+                        <span>1,8 мм</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__row">
+                <div class="product-card__cell">
+                    <div class="product-card__table-title">форма пружины</div>
+                    <div class="product-card__table-icon"
+                        style="background-image: url(${require('./img/product_prop_3.png')})">
+                    </div>
+                    <div class="product-card__table-props">бочко–образная</div>
+                </div>
+
+                <div class="product-card__cell">
+                    <div class="product-card__table-title">диаметр пружины</div>
+                    <div class="product-card__table-icon"
+                        style="background-image: url(${require('./img/product_prop_4.png')})">
+                    </div>
+                    <div class="product-card__table-props">
+                        <span>Ø 54 мм</span>
+                        <span>Ø 62 мм</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__row">
+                <div class="product-card__cell">
+                    <div class="product-card__table-title">кол-во витков</div>
+                    <div class="product-card__table-icon"
+                        style="background-image: url(${require('./img/product_prop_5.png')})">
+                    </div>
+                    <div class="product-card__table-props">
+                        <span>6 — 6,5 см</span>
+                    </div>
+                </div>
+
+                <div class="product-card__cell">
+                    <div class="product-card__table-title">плотность пружин</div>
+                    <div class="product-card__table-icon"
+                        style="background-image: url(${require('./img/product_prop_6.png')})">
+                    </div>
+                    <div class="product-card__table-props">
+                        <span>290 п./м²</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card__props">
+            <div class="product-card__props-title">Материалы</div>
+
+            <div class="product-card__props-item">Проволока — 1,8 мм</div>
+            <div class="product-card__props-item">Спанбонд — 70 г / м²</div>
+            <div class="product-card__props-item">Спанбонд упаковочный — 60 г / м²</div>
+        </div>
+
+        <div class="product-card__props">
+            <div class="product-card__props-title">Размеры</div>
+
+            <div class="product-card__props-desc">
+                Размерный ряд основывается на пожеланиях наших клиентов и ограничивается лишь следующими значениями:
+            </div>
+
+            <div class="product-card__props-item">Высота — от 80 мм до 160 мм</div>
+            <div class="product-card__props-item">Максимальная ширина — 2 м</div>
+            <div class="product-card__props-item">Длина — 10 м</div>
+
+            <div class="product-card__props-desc">
+                Для каждого клиента индивидуальный размер.
+            </div>
         </div>
     </div>
 </div>

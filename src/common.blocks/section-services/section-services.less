@@ -10,14 +10,21 @@
 
   &__list {
     list-style-type: none;
-
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 8px;
+    
     @media screen and (min-width: @desktop-small) {
-      display: flex;
-
+      flex-wrap: nowrap;
       justify-content: space-around;
+      grid-gap: 0;
     }
   }
 
+  &__item {
+    flex: 1 1 48%;
+  }
+ 
   &__item:not(:last-child) {
     margin-bottom: 2.4rem;
   }

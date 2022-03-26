@@ -56,38 +56,34 @@
     }
 
     &__column {
-
-    }
-
-    &__column:nth-child(1) {
-
         @media (min-width: @desktop) {
-            flex: 0 0 65%;
-            width: 65%;
+            flex: 0 0 50%;
+            width: 50%;
             padding-right: 40px;
         }
     }
 
-    &__column:nth-child(2) {
-
+    &__subtitle {
+        margin: 16px 0;
+        font-size: 16px;
+        font-weight: 600;
+        
         @media (min-width: @desktop) {
-            flex: 0 0 35%;
-            width: 35%;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        &_hidden {
+            opacity: 0;
         }
     }
 
-    &__subtitle {
-        margin: 20px 0;
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-
     & p {
-        margin: 24px 0;
+        margin: 16px 0;
         font-size: 14px;
 
         @media (min-width: @tablet) {
-            font-size: 15px;
+            margin: 20px 0;
         }
     }
 

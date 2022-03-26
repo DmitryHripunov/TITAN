@@ -13,193 +13,72 @@
 </head>
 
 <body class="body">
+    ${require('./common.blocks/header/header.html')}
 
-    <div class="page-wrapper" id="vue-app">
+    <main class="page-wrapper__main">
 
-        ${require('./common.blocks/header/header.html')}
-
-        <main class="page-wrapper__main">
-
-            <div class="breadcrumbs-wrapper">
-                <div class="container">
-                    <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope=""
-                            itemtype="http://schema.org/ListItem">
-                            <a class="breadcrumbs__link" href="/" itemprop="item">
-                                <span itemprop="name">Главная страница</span>
-                            </a>
-                            <meta itemprop="position" content="0" />
-                        </li>
-                        <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope=""
-                            itemtype="http://schema.org/ListItem">
-                            <div class="breadcrumbs__link" itemprop="item">
-                                <span itemprop="name">Прямые диваны</span>
-                            </div>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                    </ul>
-                </div>
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope=""
+                        itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" href="/" itemprop="item">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="0" />
+                    </li>
+                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope=""
+                        itemtype="http://schema.org/ListItem">
+                        <div class="breadcrumbs__link" itemprop="item">
+                            <span itemprop="name">НПБ</span>
+                        </div>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <div class="page-frame page-frame_category">
+        <div class="page-frame page-frame_category">
 
-                <div class="container">
+            <div class="container">
 
-                    <h1 class="page-title">
-                        <span>Прямые диваны</span>
-                    </h1>
+                <h1 class="page-title">
+                    <span>Прямые диваны</span>
+                </h1>
 
+                <p class="page-desc">
+                    Сайт рыба-текст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного
+                    текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+                </p>
 
-                    <div class="select-category">
-                        <div class="select-category__item">
-                            <a href="category.html" class="catalog-category is-active">
-                                <div class="catalog-category__img">
-                                    <svg>
-                                        <use xlink:href="#category-pryamoi"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog-category__title">Прямые</div>
-                            </a>
+                <div class="product-group">
+                    <div class="product-group__list">
+                        <div class="product-group__item">
+                            ${require('./common.blocks/product-card/product-card.html')}
                         </div>
-                        <div class="select-category__item">
-                            <a href="category.html" class="catalog-category">
-                                <div class="catalog-category__img">
-                                    <svg>
-                                        <use xlink:href="#category-ugol"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog-category__title">Угловые</div>
-                            </a>
+                        <div class="product-group__item">
+                            ${require('./common.blocks/product-card/product-card.html')}
                         </div>
-                        <div class="select-category__item">
-                            <a href="category.html" class="catalog-category">
-                                <div class="catalog-category__img">
-                                    <svg>
-                                        <use xlink:href="#category-p"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog-category__title">П-образные</div>
-                            </a>
+                        <div class="product-group__item">
+                            ${require('./common.blocks/product-card/product-card.html')}
                         </div>
-                        <div class="select-category__item">
-                            <a href="category.html" class="catalog-category">
-                                <div class="catalog-category__img">
-                                    <svg>
-                                        <use xlink:href="#category-ottomanka"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog-category__title">С оттоманкой</div>
-                            </a>
+                        <div class="product-group__item">
+                            ${require('./common.blocks/product-card/product-card.html')}
                         </div>
-                        <div class="select-category__item">
-                            <a href="category.html" class="catalog-category">
-                                <div class="catalog-category__img">
-                                    <svg>
-                                        <use xlink:href="#category-collection"></use>
-                                    </svg>
-                                </div>
-                                <div class="catalog-category__title">Коллекции</div>
-                            </a>
+                        <div class="product-group__item">
+                            ${require('./common.blocks/product-card/product-card.html')}
+                        </div>
+                        <div class="product-group__item">
+                            ${require('./common.blocks/product-card/product-card.html')}
                         </div>
                     </div>
-
-                    ${require('./common.blocks/filter/filter.html')}
-
-                    <div class="product-group">
-                        <div class="product-group__list">
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-                ${require('./common.blocks/feedback-form/feedback-form.html')}
-
-                <section class="section">
-                    <div class="container">
-                        <div class="catalog-description">
-                            <div class="catalog-description__title">
-                                Современные модульные диваны и мягкая мебель от производителя
-                            </div>
-                            <div class="catalog-description__text">
-                                <div class="catalog-description__text-section">
-                                    <p>
-                                        Если вам надоела стандартная мягкая мебель, рассчитанная на ограниченное
-                                        количество мест, которая попадает на свалку такими же, как при сходе с конвейера
-                                        фабрики, значит пришло время попробовать что-то новенькое. Современные модульные
-                                        диваны и мягкая мебель от производителя Vosart, которую можно найти в Москве, не
-                                        имеет строгой конфигурации, что позволяет каждому почувствовать себя дизайнером
-                                        и самостоятельно определить внешний вид, конструкцию и размер будущей мягкой
-                                        зоны.
-                                    </p>
-                                </div>
-                                <div class="catalog-description__text-section">
-                                    <div class="catalog-description__subtitle">Как правильно выбрать дизайнерский мягкий
-                                        диван?</div>
-                                    <p>
-                                        Прежде чем купить модульный диван для гостиной, стоит подробнее разобраться в
-                                        особенностях такой мебели. Это набор отдельно стоящих блоков, которые легко
-                                        комбинировать в любом порядке либо использовать отдельно. Некоторые модели могут
-                                        содержать даже не один десяток элементов, соединённых между собой, а их
-                                        количество ограничивается только вашей фантазией. Для вдохновения можно
-                                        посмотреть фото готовых изделий на сайте, чтобы увидеть, какие мягкие модульные
-                                        диваны можно купить в Москве в нашей от компании и сориентироваться в ценах, от
-                                        чего и как они зависят.<br>
-                                        Онлайн-фабрика Vosart предлагает эксклюзивный каталог современных моделей,
-                                        которые состоят из таких секций:
-                                    </p>
-                                    <p>
-                                        Сидения со спинкой;<br>
-                                        <br>
-                                        сидения без подлокотников либо с ними;<br>
-                                        <br>
-                                        модели с оттоманкой и без нее;<br>
-                                        <br>
-                                        варианты с подъемным механизмом;<br>
-                                        <br>
-                                        диваны с секциями для хранения вещей.
-                                    </p>
-                                    <p>
-                                        Кроме стандартных конструкций можно заказать модульный диван для гостиной с
-                                        возможностью создания спального места для гостя. Зависимо от вашего желания,
-                                        наши специалисты соединят блоки специальными крепёжными элементами либо просто
-                                        поставят рядом, не используя дополнительную фиксацию. Мы осуществляем
-                                        производство дизайнерских модульных диванов в Москве из надёжного и долговечного
-                                        массива дерева, используя в качестве наполнителя латексированный пенополиуретан
-                                        высокой прочности, который абсолютно безопасен для здоровья.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+                ${require('./common.blocks/pagination/pagination.html')}
             </div>
+        </div>
+    </main>
 
-            ${require('./common.blocks/section-services/section-services.html')}
-
-        </main>
-
-        ${require('./common.blocks/footer/footer.html')}
-
-    </div>
+    ${require('./common.blocks/footer/footer.html')}
 
     ${require('./common.blocks/popup/popup-partner.html')}
 
