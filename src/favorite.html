@@ -11,75 +11,65 @@
 
 <body class="body">
 
-<div class="page-wrapper" id="vue-app">
+${require('./common.blocks/header/header.html')}
 
-    ${require('./common.blocks/header/header.html')}
+<main class="page-wrapper__main">
 
-    <main class="page-wrapper__main">
-
-        <div class="breadcrumbs-wrapper">
-            <div class="container">
-                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a class="breadcrumbs__link" href="/" itemprop="item">
-                            <span itemprop="name">Главная страница</span>
-                        </a>
-                        <meta itemprop="position" content="0" />
-                    </li>
-                    <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <div class="breadcrumbs__link" itemprop="item">
-                            <span itemprop="name">Избранное</span>
-                        </div>
-                        <meta itemprop="position" content="1" />
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="page-frame">
-
-            <section class="section">
-
-                <div class="container">
-
-                    <h1 class="page-title">
-                        <span>Избранное</span>
-                    </h1>
-
-                    <div class="product-group">
-                        <div class="product-group__list">
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                            <div class="product-group__item">
-                                ${require('./common.blocks/product-card/product-card.html')}
-                            </div>
-                        </div>
+    <div class="breadcrumbs-wrapper">
+        <div class="container">
+            <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a class="breadcrumbs__link" href="/" itemprop="item">
+                        <span itemprop="name">Главная страница</span>
+                    </a>
+                    <meta itemprop="position" content="0" />
+                </li>
+                <li class="breadcrumbs__item is-active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <div class="breadcrumbs__link" itemprop="item">
+                        <span itemprop="name">Избранное</span>
                     </div>
+                    <meta itemprop="position" content="1" />
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="page-frame">
+        <div class="container">
+            <h1 class="page-title">
+                <span>Избранное</span>
+            </h1>
+
+            <div class="product-group">
+                <div class="product-group__list">
+                    <div class="product-group__item">
+                        ${require('./common.blocks/product-card/product-card.html')}
+                    </div>
+                    <div class="product-group__item">
+                        ${require('./common.blocks/product-card/product-card.html')}
+                    </div>
+                    <div class="product-group__item">
+                        ${require('./common.blocks/product-card/product-card.html')}
+                    </div>
+                    <div class="product-group__item">
+                        ${require('./common.blocks/product-card/product-card.html')}
+                    </div>
+                    <div class="product-group__item">
+                        ${require('./common.blocks/product-card/product-card.html')}
+                    </div>
+                    <div class="product-group__item">
+                        ${require('./common.blocks/product-card/product-card.html')}
+                    </div>
                 </div>
-
-            </section>
+            </div>
 
         </div>
+    </div>
 
-    </main>
+</main>
 
-    ${require('./common.blocks/footer/footer.html')}
+${require('./common.blocks/footer/footer.html')}
 
-</div>
 
 ${require('./common.blocks/popup/popup-partner.html')}
 
